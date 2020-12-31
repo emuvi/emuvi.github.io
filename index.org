@@ -1,0 +1,35 @@
+* Emuvs
+
+Meu nome é Everton Murilo Vieira, eu sou um programador e filosófo, basicamente um
+escritor, as vezes escrevendo algoritmos e estruturas de dados, as vezes escrevendo
+sobre a vida e as coisas. Meus interesses estão nos campos da informacao,
+conhecimento, inteligência e sabedoria. Todo o meu esforco nessa vida se dá em prol
+dessa finalidade. 
+
+Este é o meu caderno de anotacoes pessoal. Nesse espaco eu faco os registros das
+minhas impressoes, pensamentos e idéias. Procurando sempre densevolve-las da melhor
+maneira possível. Aqui é onde eu deixo o fluxo da minha consciência registrado para
+futuras referências.
+
+* Projetos
+
+Estes são os meus projetos atuais.
+
+** Pacmidia
+
+Tendo em vista a carga enorme de documentos e arquivos multimídia que estão a nossa
+disposicão nos dias de hoje é interessante ter um programa para auxiliar no seu
+armazenamento, classificacão e recuperacão.
+
+*** Características
+
+ - [ ] Um conjunto de mídia é armezado dentro de uma pasta com os seus metadados.
+ - [ ] Dois ou mais arquivos de mídia iguais devem ocupar um único espaco na raiz. 
+
+* Poesias
+
+** Praia Vermelha
+
+As meninas dancam sonoras no mar
+livre sentem na pele o mar e a outra
+na praia que é guardada da maioria.
