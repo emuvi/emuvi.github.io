@@ -1,0 +1,12 @@
+body {
+  background-image: url("./background.png");
+  padding: 36px;
+}
+
+main {
+  margin: auto;
+  padding: 18px;
+  max-width: 1000px;
+  border: 1px solid black;
+  background-color: white;
+}
