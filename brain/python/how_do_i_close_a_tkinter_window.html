@@ -1,0 +1,894 @@
+<!DOCTYPE html> <html itemscope itemtype=https://schema.org/QAPage class=html__responsive style><!--
+ Page saved with SingleFile 
+ url: https://stackoverflow.com/questions/110923/how-do-i-close-a-tkinter-window 
+ saved date: Thu Feb 11 2021 09:00:04 GMT-0300 (Horário Padrão de Brasília)
+--><meta charset=utf-8>
+<title>python - How do I close a tkinter window? - Stack Overflow</title>
+<link rel=image_src href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+<link rel=search type=application/opensearchdescription+xml title="Stack Overflow" href=https://stackoverflow.com/opensearch.xml>
+<link rel=canonical href=https://stackoverflow.com/questions/110923/how-do-i-close-a-tkinter-window>
+<meta name=viewport content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+<meta property=og:type content=website>
+<meta property=og:url content=https://stackoverflow.com/questions/110923/how-do-i-close-a-tkinter-window>
+<meta property=og:site_name content="Stack Overflow">
+<meta property=og:image itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded">
+<meta name=twitter:card content=summary>
+<meta name=twitter:domain content=stackoverflow.com>
+<meta name=twitter:title property=og:title itemprop=name content="How do I close a tkinter window?">
+<meta name=twitter:description property=og:description itemprop=description content="How do I end a Tkinter program? Let's say I have this code:
+
+from Tkinter import *
+
+def quit():
+    # code to exit
+
+root = Tk()
+Button(root, text=&quot;Quit&quot;, command=quit).pack()
+root.mainloop()
+How s...">
+<style>html,body,div,span,p,pre,code,strong{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}.svg-spot{vertical-align:bottom}.svg-icon:not(.native) *,.svg-spot:not(.native) *{fill:currentColor}.s-avatar .s-avatar--badge{position:absolute;right:-4px;bottom:-4px}pre.s-code-block{font-size:13px;font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;line-height:1.30769231;color:var(--highlight-color);background-color:var(--highlight-bg);border-radius:5px;margin:0;padding:12px;overflow:auto;scrollbar-color:var(--scrollbar) transparent}pre.s-code-block::-webkit-scrollbar{width:10px;height:10px;background-color:transparent}pre.s-code-block::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}pre.s-code-block::-webkit-scrollbar-thumb{border-radius:10px;background-color:var(--scrollbar)}pre.s-code-block::-webkit-scrollbar-corner{background-color:transparent;border-color:transparent}pre.s-code-block>code{font-family:inherit}pre.s-code-block>code .hljs-comment{color:var(--highlight-comment)}pre.s-code-block>code .hljs-keyword{color:var(--highlight-keyword)}pre.s-code-block>code .hljs-string{color:var(--highlight-variable)}pre.s-code-block>code .hljs-title,pre.s-code-block>code .hljs-literal{color:var(--highlight-literal)}@supports ((-webkit-clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%)) or (clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%))){.s-expandable:not(.is-expanded) .s-expandable--content{opacity:1;-webkit-transform:none;transform:none}}@supports (-webkit-overflow-scrolling:touch){.s-input,.s-textarea{font-size:16px;padding:.36em .55em}.s-input::-webkit-input-placeholder,.s-textarea::-webkit-input-placeholder{line-height:normal!important}}@supports (-webkit-overflow-scrolling:touch){.s-select>select{font-size:16px;padding:.4em .55em}}@supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)){.s-checkbox,.s-radio{-webkit-appearance:none;-moz-appearance:none;appearance:none;margin:0;width:1em;height:1em;border:1px solid var(--black-200);background-color:var(--white);outline:0;font-size:inherit;vertical-align:middle;cursor:pointer}.s-checkbox::-ms-check,.s-radio::-ms-check{display:none}}@supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)){.s-checkbox{border-radius:3px;background-position:center center;background-repeat:no-repeat;background-size:contain}.s-checkbox[disabled]{border-color:var(--black-200);background-color:var(--black-075)}.s-checkbox:checked{border-color:var(--blue-500)!important;background-color:var(--blue-500);background-image:url("data:image/svg+xml,%3Csvg width='11' height='11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3.41L8.59 2 4 6.59 2.41 5 1 6.41l3 3z' fill='%23fff'/%3E%3C/svg%3E")}.s-checkbox:checked:focus{border-color:var(--blue-500)}.s-checkbox:checked[disabled]{border-color:var(--black-500)!important;background-color:var(--black-400)}.s-checkbox:focus{border-color:var(--blue-300);box-shadow:0 0 0 4px var(--focus-ring)}}@supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)){.s-radio{border-radius:50%}.s-radio:checked{border-color:var(--blue-500);border-width:.30769231em;background-color:#fff}.s-radio:focus{box-shadow:0 0 0 4px var(--focus-ring)}}.s-input-icon{position:absolute;top:50%;right:.7em;margin-top:-9px;pointer-events:none}.s-input-icon.s-input-icon__search{right:auto;left:.7em;color:var(--black-200)}.s-modal--close .svg-icon{margin:0!important}.s-prose{--s-prose-line-height:1.5;--s-prose-spacing:1.1em;--s-prose-spacing-condensed:calc(var(--s-prose-spacing) / 2);font-size:15px;line-height:var(--s-prose-line-height);word-wrap:break-word}.s-prose p{margin-bottom:var(--s-prose-spacing)}.s-prose pre{word-wrap:normal}.s-prose code{font-size:13px;font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif}.s-prose hr{border:0;color:var(--black-100);background-color:var(--black-100);height:1px;margin-bottom:var(--s-prose-spacing)}.s-prose p:last-child,.s-prose dl:last-child,.s-prose blockquote:last-child,.s-prose table:last-child,.s-prose .s-table-container:last-child,.s-prose .s-link-preview:last-child,.s-prose hr:last-child,.s-prose ol:last-child,.s-prose ul:last-child,.s-prose img:last-child,.s-prose pre:last-child,.s-prose h1:last-child,.s-prose h2:last-child,.s-prose h3:last-child,.s-prose h4:last-child,.s-prose h5:last-child,.s-prose h6:last-child,.s-prose p:only-child,.s-prose dl:only-child,.s-prose blockquote:only-child,.s-prose table:only-child,.s-prose .s-table-container:only-child,.s-prose .s-link-preview:only-child,.s-prose hr:only-child,.s-prose ol:only-child,.s-prose ul:only-child,.s-prose img:only-child,.s-prose pre:only-child,.s-prose h1:only-child,.s-prose h2:only-child,.s-prose h3:only-child,.s-prose h4:only-child,.s-prose h5:only-child,.s-prose h6:only-child{margin-bottom:0}.s-prose *:not(.s-code-block)>code{padding:2px 4px;color:var(--black-800);background-color:var(--black-075);border-radius:3px}.s-prose pre{margin-top:0;margin-bottom:calc(var(--s-prose-spacing) + .4em)}.s-prose pre:not(.s-code-block){padding:12px;color:var(--highlight-color);width:auto;max-height:600px;overflow:auto;font-size:13px;line-height:1.30769231;background-color:var(--highlight-bg);border-radius:5px;scrollbar-color:var(--scrollbar) transparent}.s-prose pre:not(.s-code-block) code{background-color:transparent;padding:0;border-radius:0}.s-prose pre:not(.s-code-block)::-webkit-scrollbar{width:10px;height:10px;background-color:transparent}.s-prose pre:not(.s-code-block)::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.s-prose pre:not(.s-code-block)::-webkit-scrollbar-thumb{border-radius:10px;background-color:var(--scrollbar)}.s-prose pre:not(.s-code-block)::-webkit-scrollbar-corner{background-color:transparent;border-color:transparent}@supports (-ms-ime-align:auto){.s-spinner,.s-spinner:before,.s-spinner:after{filter:invert(0);transform-origin:50% 50% 1px}}@media not all and (min-resolution:.001dpcm){@supports (-webkit-appearance:none) and (stroke-color:transparent){.s-spinner,.s-spinner:before,.s-spinner:after{box-shadow:0 0 0 2px transparent}}}@keyframes s-spinner-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}@supports ((-webkit-clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%)) or (clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%))) or (-webkit-clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%)){.s-sidebarwidget:after{-webkit-clip-path:polygon(0% 0%,100% 0%,100% 50%,0% 50%);clip-path:polygon(0% 0%,100% 0%,100% 50%,0% 50%);border:1px solid var(--black-100)}}body{--ff-sans:Arial,"Helvetica Neue",Helvetica,sans-serif;--ff-serif:Georgia,Times New Roman,Times,serif;--ff-mono:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif}body{--white:#fff;--black:#0c0d0e;--orange:#f48024;--yellow:#fbf2d4;--green:#5eba7d;--blue:#0077cc;--powder:#e1ecf4;--red:#d1383d;--black-025:#fafafb;--black-050:#eff0f1;--black-075:#e4e6e8;--black-100:#d6d9dc;--black-150:#c8ccd0;--black-200:#bbc0c4;--black-300:#9fa6ad;--black-350:#9199a1;--black-400:#848d95;--black-500:#6a737c;--black-600:#535a60;--black-700:#3c4146;--black-750:#2f3337;--black-800:#242729;--black-900:#0c0d0e;--orange-050:#fff7f2;--orange-100:#fee3cf;--orange-200:#fcd0ad;--orange-300:#f7aa6d;--orange-400:#f48024;--orange-500:#f2720c;--orange-600:#da670b;--orange-700:#bd5c00;--orange-800:#a35200;--orange-900:#874600;--blue-050:#f2f9ff;--blue-100:#cfeafe;--blue-200:#addafc;--blue-300:#6cbbf7;--blue-400:#379fef;--blue-500:#0095ff;--blue-600:#0077cc;--blue-700:#0064bd;--blue-800:#0054a3;--blue-900:#004487;--powder-050:#f4f8fb;--powder-100:#e1ecf4;--powder-200:#d1e5f1;--powder-300:#b3d3ea;--powder-400:#a0c7e4;--powder-500:#7aa7c7;--powder-600:#5b8db1;--powder-700:#39739d;--powder-800:#2c5777;--powder-900:#1e3c52;--green-025:#eef8f1;--green-050:#dcf0e2;--green-100:#cae8d4;--green-200:#a6d9b7;--green-300:#82ca9a;--green-400:#5eba7d;--green-500:#48a868;--green-600:#3d8f58;--green-700:#2f6f44;--green-800:#29603b;--green-900:#1e472c;--yellow-050:#fdf7e3;--yellow-100:#fbf2d4;--yellow-200:#f1e5bc;--yellow-300:#e6d178;--yellow-400:#e9c63f;--yellow-500:#ddb624;--yellow-600:#cea51b;--yellow-700:#b89516;--yellow-800:#9f8010;--yellow-900:#826a0b;--red-050:#fdf3f4;--red-100:#f9d3d7;--red-200:#f4b4bb;--red-300:#e87c87;--red-400:#de535e;--red-500:#d1383d;--red-600:#c02d2e;--red-700:#ac2726;--red-800:#942121;--red-900:#7a1819;--gold:#ffcc01;--gold-lighter:#fff4d1;--gold-darker:#f1b600;--silver:#b4b8bc;--silver-lighter:#e8e8e8;--silver-darker:#9a9c9f;--bronze:#caa789;--bronze-lighter:#f2e9e1;--bronze-darker:#ab825f;--fc-dark:#0c0d0e;--fc-medium:#3c4146;--fc-light:#6a737c;--focus-ring:rgba(0,149,255,0.15);--focus-ring-success:rgba(166,217,183,0.4);--focus-ring-warning:rgba(233,198,63,0.4);--focus-ring-error:rgba(192,45,46,0.15);--focus-ring-muted:rgba(36,39,41,0.1);--bs-sm:0 1px 2px rgba(0,0,0,0.05),0 1px 4px rgba(0,0,0,0.05),0 2px 8px rgba(0,0,0,0.05);--bs-md:0 1px 3px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.06),0 3px 8px rgba(0,0,0,0.09);--bs-lg:0 1px 4px rgba(0,0,0,0.09),0 3px 8px rgba(0,0,0,0.09),0 4px 13px rgba(0,0,0,0.13);--scrollbar:rgba(0,0,0,0.2);--highlight-bg:#f6f6f6;--highlight-color:#2f3337;--highlight-comment:#656e77;--highlight-punctuation:var(--black-600);--highlight-namespace:#b75501;--highlight-attribute:#015692;--highlight-literal:#b75501;--highlight-symbol:#803378;--highlight-keyword:#015692;--highlight-variable:#54790d;--highlight-addition:#2f6f44;--highlight-deletion:#c02d2e}.fc-orange-400{color:var(--orange-400)!important}.m0{margin:0!important}.mr0{margin-right:0!important}.mln2{margin-left:-2px!important}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.va-text-bottom{vertical-align:text-bottom!important}.va-text-top{vertical-align:text-top!important}.o50{opacity:.5!important}body{--theme-primary-color-h:26.53846154;--theme-primary-color-s:90.43478261%;--theme-primary-color-l:54.90196078%;--theme-primary-color-r:244;--theme-primary-color-g:128;--theme-primary-color-b:36;--theme-primary-color:hsl(var(--theme-primary-color-h),var(--theme-primary-color-s),var(--theme-primary-color-l));--theme-primary-color-darken-5:hsl(var(--theme-primary-color-h),var(--theme-primary-color-s),calc(var(--theme-primary-color-l) - 5%));--theme-primary-color-darken-10:hsl(var(--theme-primary-color-h),var(--theme-primary-color-s),calc(var(--theme-primary-color-l) - 10%));--theme-primary-color-darken-15:hsl(var(--theme-primary-color-h),var(--theme-primary-color-s),calc(var(--theme-primary-color-l) - 15%));--theme-primary-color-darken-20:hsl(var(--theme-primary-color-h),var(--theme-primary-color-s),calc(var(--theme-primary-color-l) - 20%));--theme-primary-color-darken-30:hsl(var(--theme-primary-color-h),var(--theme-primary-color-s),calc(var(--theme-primary-color-l) - 30%));--theme-primary-color-lighten-10:hsl(var(--theme-primary-color-h),var(--theme-primary-color-s),calc(var(--theme-primary-color-l) + 10%));--theme-primary-color-tint-10:rgb(calc(25.5 + var(--theme-primary-color-r) * .9),calc(25.5 + var(--theme-primary-color-g) * .9),calc(25.5 + var(--theme-primary-color-b) * .9));--theme-primary-color-tint-50:rgb(calc(127.5 + var(--theme-primary-color-r) * .5),calc(127.5 + var(--theme-primary-color-g) * .5),calc(127.5 + var(--theme-primary-color-b) * .5));--theme-primary-color-tint-60:rgb(calc(153 + var(--theme-primary-color-r) * .4),calc(153 + var(--theme-primary-color-g) * .4),calc(153 + var(--theme-primary-color-b) * .4));--theme-primary-color-tint-70:rgb(calc(178.5 + var(--theme-primary-color-r) * .3),calc(178.5 + var(--theme-primary-color-g) * .3),calc(178.5 + var(--theme-primary-color-b) * .3));--theme-primary-color-tint-80:rgb(calc(204 + var(--theme-primary-color-r) * .2),calc(204 + var(--theme-primary-color-g) * .2),calc(204 + var(--theme-primary-color-b) * .2));--theme-primary-color-tint-85:rgb(calc(216.75 + var(--theme-primary-color-r) * .15),calc(216.75 + var(--theme-primary-color-g) * .15),calc(216.75 + var(--theme-primary-color-b) * .15));--theme-primary-color-tint-90:rgb(calc(229.5 + var(--theme-primary-color-r) * .1),calc(229.5 + var(--theme-primary-color-g) * .1),calc(229.5 + var(--theme-primary-color-b) * .1));--theme-primary-color-fade-50:hsla(var(--theme-primary-color-h),var(--theme-primary-color-s),var(--theme-primary-color-l),.5);--theme-primary-color-fade-75:hsla(var(--theme-primary-color-h),var(--theme-primary-color-s),var(--theme-primary-color-l),.75);--theme-primary-color-fade-80:hsla(var(--theme-primary-color-h),var(--theme-primary-color-s),var(--theme-primary-color-l),.8);--theme-button-color:var(--blue-600);--theme-button-hover-color:var(--blue-700);--theme-button-hover-background-color:var(--blue-050);--theme-button-active-background-color:var(--blue-100);--theme-button-selected-color:var(--blue-900);--theme-button-selected-background-color:var(--blue-200);--theme-button-filled-color:var(--powder-700);--theme-button-filled-background-color:var(--powder-100);--theme-button-filled-border-color:var(--powder-500);--theme-button-filled-hover-color:var(--powder-800);--theme-button-filled-hover-background-color:var(--powder-300);--theme-button-filled-active-background-color:var(--powder-400);--theme-button-filled-active-border-color:var(--powder-600);--theme-button-filled-selected-color:var(--powder-900);--theme-button-filled-selected-background-color:var(--powder-500);--theme-button-filled-selected-border-color:var(--powder-700);--theme-button-outlined-border-color:var(--blue-400);--theme-button-outlined-selected-border-color:var(--blue-600);--theme-button-primary-background-color:var(--blue-500);--theme-button-primary-hover-background-color:var(--blue-600);--theme-button-primary-active-background-color:var(--blue-700);--theme-button-primary-selected-background-color:var(--blue-800);--theme-background-color:var(--white);--theme-background-position:top left;--theme-background-repeat:repeat;--theme-background-size:auto;--theme-background-attachment:auto;--theme-content-background-color:var(--white);--theme-content-border-color:var(--black-100);--theme-header-background-color:var(--theme-primary-color);--theme-header-background-position:center left;--theme-header-background-repeat:repeat;--theme-header-background-size:auto;--theme-header-background-border-bottom:0;--theme-header-link-color:var(--theme-primary-color);--theme-header-sponsored-color:rgba(255,255,255,0.4);--theme-header-foreground-color:transparent;--theme-header-foreground-position:bottom right;--theme-header-foreground-repeat:no-repeat;--theme-header-foreground-size:auto;--theme-footer-background-color:#242729;--theme-footer-background-position:top left;--theme-footer-background-repeat:no-repeat;--theme-footer-background-size:auto;--theme-footer-background-border-top:0;--theme-footer-title-color:#bbc0c4;--theme-footer-text-color:#6a737c;--theme-footer-link-color:#848d95;--theme-footer-link-color-hover:#9fa6ad;--theme-footer-link-color-active:#f48024;--theme-footer-link-caret-color:var(--theme-footer-background-color);--theme-footer-divider-color:#3c4146;--theme-footer-padding-top:0;--theme-footer-padding-bottom:0;--theme-link-color:var(--blue-600);--theme-link-color-hover:var(--blue-500);--theme-link-color-visited:var(--blue-700);--theme-tag-color:var(--powder-700);--theme-tag-background-color:var(--powder-100);--theme-tag-border-color:transparent;--theme-tag-color-hover:var(--powder-800);--theme-tag-background-color-hover:var(--powder-200);--theme-tag-border-color-hover:transparent;--theme-body-font-family:var(--ff-sans);--theme-body-font-color:var(--black-800);--theme-question-title-font-family:var(--ff-sans);--theme-question-title-color:var(--theme-link-color);--theme-question-title-color-hover:var(--theme-link-color-hover);--theme-question-title-color-visited:var(--theme-link-color-visited);--theme-question-body-font-family:var(--ff-sans);--theme-post-owner-background-color:var(--powder-100);--theme-post-owner-new-background-color:var(--powder-200)}html,body{color:var(--theme-body-font-color);font-family:var(--theme-body-font-family);font-size:13px;line-height:1.30769231}@media (max-width:640px){html.html__responsive:not(.html__unpinned-leftnav),html.html__responsive:not(.html__unpinned-leftnav) body{font-size:11px}}body{box-sizing:border-box}body *,body *:before,body *:after{box-sizing:inherit}.svg-icon{vertical-align:bottom}.svg-icon:not(.native) *{fill:currentColor}strong{font-weight:bold}p{clear:both;margin-top:0}p code{padding:1px 5px}code{background-color:var(--black-075)}pre{width:auto;max-height:600px}pre code{background-color:transparent}pre::-webkit-scrollbar{width:10px;height:10px;background-color:transparent}pre::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}pre::-webkit-scrollbar-thumb{border-radius:10px;background-color:var(--scrollbar)}pre::-webkit-scrollbar-corner{background-color:transparent;border-color:transparent}.s-prose{font-family:var(--theme-question-body-font-family)}@keyframes blinking{from{background:#f4a83d}to{background:rgba(244,168,61,0)}}@keyframes opacity-in{0%{opacity:0}100%{opacity:1}}@keyframes spinnerRotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes new-profile-box{0%{width:100px;height:11px}100%{width:164px;height:56px}}@keyframes blink{50%{background-color:transparent}}.post-layout{display:grid;grid-template-columns:-webkit-max-content 1fr;grid-template-columns:max-content 1fr}.post-layout--right{padding-right:16px;grid-column:2;width:auto;min-width:0}.post-layout--right .s-prose{width:100%}@media not all and (min-resolution:.001dpcm){@supports (-webkit-appearance:none) and (stroke-color:transparent){.s-editor-shadow:after{transition:none}}}.top-bar *{box-sizing:border-box}.top-bar .-secondary .-link .svg-icon{vertical-align:text-top}.site-footer *,.site-footer *:before,.site-footer *:after{box-sizing:border-box}@supports (display:grid){.site-footer.site-footer__open .site-footer--categories{display:grid}}@supports (display:grid){ul.comments-list .comment-actions{display:grid;grid-template-columns:repeat(2,max-content);align-content:flex-start;width:37px;width:calc(2ch + 16px + 4px + 2px)}ul.comments-list .comment-flagging:nth-child(3){grid-column:2}}@supports (display:grid) and (display:contents) and (not (-apple-trailing-word:auto)){body:not(.no-grid-comments) ul.comments-list{display:grid;grid-template-columns:max-content 1fr}body:not(.no-grid-comments) ul.comments-list .comment-score{width:auto;min-width:16px}body:not(.no-grid-comments) ul.comments-list .comment-score>span{min-width:0;float:none}body:not(.no-grid-comments) ul.comments-list .comment-actions{width:auto}body:not(.no-grid-comments) ul.comments-list .comment{display:contents}body:not(.no-grid-comments) ul.comments-list .comment__highlight .comment-actions{transition:none;background-color:var(--yellow-100)}}html{height:100%}body{min-height:100%;display:flex;flex-direction:column;background-color:var(--theme-background-color);background-image:none;background-position:var(--theme-background-position);background-repeat:var(--theme-background-repeat);background-size:var(--theme-background-size);background-attachment:var(--theme-background-attachment);--mp-alt-row-color:var(--black-050);--mp-critical-color:var(--red-600);--mp-duration-color:var(--black-800);--mp-gap-bg-color:var(--black-025);--mp-gap-font-color:var(--black-700);--mp-highlight-default-color:var(--fc-dark);--mp-highlight-fade-color:var(--yellow-300);--mp-highlight-keyword-color:var(--blue-700);--mp-highlight-literal-color:var(--green-500);--mp-label-color:var(--black-700);--mp-link-color:var(--blue-700);--mp-main-bg-color:var(--white);--mp-muted-color:var(--black-300);--mp-popup-shadow:var(--bs-sm);--mp-query-border-color:var(--black-100);--mp-result-border:solid .5px var(--black-300);--mp-warning-color:var(--red-600)}.container{position:relative;flex:1 0 auto;text-align:left}#content{margin:0 auto}#content:before,#content:after{content:"";display:table}#content:after{clear:both}#answers{clear:both}#answers{padding-top:10px}.question-page #answers .answer{border-bottom:1px solid var(--black-075)}.answer{padding-bottom:16px;padding-top:16px}#mainbar{float:left;margin:0;padding:0}code{white-space:pre-wrap}pre code{white-space:inherit;padding:0}@keyframes highlighted-post-fade{0%{background-color:var(--yellow-100)}100%{background-color:rgba(0,0,0,0)}}html.html__responsive,html.html__responsive body{min-width:auto}body{padding-top:50px}body .top-bar~.container{margin-top:0}body>.container{max-width:1264px;width:100%;background:none;display:flex;justify-content:space-between;margin:0 auto}body>.container:after,body>.container:before{display:none}#content{max-width:1100px;width:calc(100% - 164px);background-color:var(--theme-content-background-color);border-radius:0;border:1px solid var(--theme-content-border-color);border-top-width:0;border-bottom-width:0;border-left-width:1px;border-right-width:0;padding:24px;box-sizing:border-box}@media screen and (max-width:640px){html.html__responsive #content{border-left:0;border-right:0}}@media screen and (max-width:980px){html.html__responsive:not(.html__unpinned-leftnav) #content{padding-left:16px;padding-right:16px}}@media screen and (max-width:640px){html.html__responsive #content{padding-left:12px;padding-right:12px;width:100%}}#mainbar{width:calc(100% - 300px - 24px)}@media screen and (max-width:980px){html.html__responsive:not(.html__unpinned-leftnav) #mainbar,html.html__responsive:not(.html__unpinned-leftnav) .mainbar{width:100%;float:none}}#answers{width:auto;float:none}.answer{width:100%}.left-sidebar *,.left-sidebar *:after,.left-sidebar *:before{box-sizing:border-box}@supports (position:sticky) or (position:-webkit-sticky){.left-sidebar--sticky-container:not(.left-sidebar__fake-sticky){position:-webkit-sticky;position:sticky;width:auto;top:0;margin-bottom:8px;max-height:calc(100vh);overflow-y:auto;scrollbar-color:var(--scrollbar) transparent}.left-sidebar--sticky-container:not(.left-sidebar__fake-sticky)::-webkit-scrollbar{width:10px;height:10px;background-color:transparent}.left-sidebar--sticky-container:not(.left-sidebar__fake-sticky)::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.left-sidebar--sticky-container:not(.left-sidebar__fake-sticky)::-webkit-scrollbar-thumb{border-radius:10px;background-color:var(--scrollbar)}.left-sidebar--sticky-container:not(.left-sidebar__fake-sticky)::-webkit-scrollbar-corner{background-color:transparent;border-color:transparent}.top-bar._fixed~.container .left-sidebar--sticky-container:not(.left-sidebar__fake-sticky){top:50px;max-height:calc(100vh - 50px)}html.html__unpinned-leftnav .left-sidebar--sticky-container:not(.left-sidebar__fake-sticky){max-height:calc(100vh - 50px)}}.nav-links .nav-links--link.-link__with-icon .svg-icon{flex-shrink:0;margin-top:-1px;margin-right:4px}.nav-links .nav-links--link.-link__with-icon:hover .svg-icon,.nav-links .nav-links--link.-link__with-icon:focus .svg-icon,.nav-links .nav-links--link.-link__with-icon:active .svg-icon{color:var(--black-900)}.nav-links .youarehere .nav-links--link .svg-icon{color:var(--black-900)}body{--aws-logo:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4wLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzMDQgMTgyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDQgMTgyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojMjUyRjNFO30NCgkuc3Qxe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6I0ZGOTkwMDt9DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTg2LjQsNjYuNGMwLDMuNywwLjQsNi43LDEuMSw4LjljMC44LDIuMiwxLjgsNC42LDMuMiw3LjJjMC41LDAuOCwwLjcsMS42LDAuNywyLjNjMCwxLTAuNiwyLTEuOSwzbC02LjMsNC4yDQoJCWMtMC45LDAuNi0xLjgsMC45LTIuNiwwLjljLTEsMC0yLTAuNS0zLTEuNEM3Ni4yLDkwLDc1LDg4LjQsNzQsODYuOGMtMS0xLjctMi0zLjYtMy4xLTUuOWMtNy44LDkuMi0xNy42LDEzLjgtMjkuNCwxMy44DQoJCWMtOC40LDAtMTUuMS0yLjQtMjAtNy4yYy00LjktNC44LTcuNC0xMS4yLTcuNC0xOS4yYzAtOC41LDMtMTUuNCw5LjEtMjAuNmM2LjEtNS4yLDE0LjItNy44LDI0LjUtNy44YzMuNCwwLDYuOSwwLjMsMTAuNiwwLjgNCgkJYzMuNywwLjUsNy41LDEuMywxMS41LDIuMnYtNy4zYzAtNy42LTEuNi0xMi45LTQuNy0xNmMtMy4yLTMuMS04LjYtNC42LTE2LjMtNC42Yy0zLjUsMC03LjEsMC40LTEwLjgsMS4zYy0zLjcsMC45LTcuMywyLTEwLjgsMy40DQoJCWMtMS42LDAuNy0yLjgsMS4xLTMuNSwxLjNjLTAuNywwLjItMS4yLDAuMy0xLjYsMC4zYy0xLjQsMC0yLjEtMS0yLjEtMy4xdi00LjljMC0xLjYsMC4yLTIuOCwwLjctMy41YzAuNS0wLjcsMS40LTEuNCwyLjgtMi4xDQoJCWMzLjUtMS44LDcuNy0zLjMsMTIuNi00LjVjNC45LTEuMywxMC4xLTEuOSwxNS42LTEuOWMxMS45LDAsMjAuNiwyLjcsMjYuMiw4LjFjNS41LDUuNCw4LjMsMTMuNiw4LjMsMjQuNlY2Ni40eiBNNDUuOCw4MS42DQoJCWMzLjMsMCw2LjctMC42LDEwLjMtMS44YzMuNi0xLjIsNi44LTMuNCw5LjUtNi40YzEuNi0xLjksMi44LTQsMy40LTYuNGMwLjYtMi40LDEtNS4zLDEtOC43di00LjJjLTIuOS0wLjctNi0xLjMtOS4yLTEuNw0KCQljLTMuMi0wLjQtNi4zLTAuNi05LjQtMC42Yy02LjcsMC0xMS42LDEuMy0xNC45LDRjLTMuMywyLjctNC45LDYuNS00LjksMTEuNWMwLDQuNywxLjIsOC4yLDMuNywxMC42DQoJCUMzNy43LDgwLjQsNDEuMiw4MS42LDQ1LjgsODEuNnogTTEyNi4xLDkyLjRjLTEuOCwwLTMtMC4zLTMuOC0xYy0wLjgtMC42LTEuNS0yLTIuMS0zLjlMOTYuNywxMC4yYy0wLjYtMi0wLjktMy4zLTAuOS00DQoJCWMwLTEuNiwwLjgtMi41LDIuNC0yLjVoOS44YzEuOSwwLDMuMiwwLjMsMy45LDFjMC44LDAuNiwxLjQsMiwyLDMuOWwxNi44LDY2LjJsMTUuNi02Ni4yYzAuNS0yLDEuMS0zLjMsMS45LTMuOWMwLjgtMC42LDIuMi0xLDQtMQ0KCQloOGMxLjksMCwzLjIsMC4zLDQsMWMwLjgsMC42LDEuNSwyLDEuOSwzLjlsMTUuOCw2N2wxNy4zLTY3YzAuNi0yLDEuMy0zLjMsMi0zLjljMC44LTAuNiwyLjEtMSwzLjktMWg5LjNjMS42LDAsMi41LDAuOCwyLjUsMi41DQoJCWMwLDAuNS0wLjEsMS0wLjIsMS42Yy0wLjEsMC42LTAuMywxLjQtMC43LDIuNWwtMjQuMSw3Ny4zYy0wLjYsMi0xLjMsMy4zLTIuMSwzLjljLTAuOCwwLjYtMi4xLDEtMy44LDFoLTguNmMtMS45LDAtMy4yLTAuMy00LTENCgkJYy0wLjgtMC43LTEuNS0yLTEuOS00TDE1NiwyM2wtMTUuNCw2NC40Yy0wLjUsMi0xLjEsMy4zLTEuOSw0Yy0wLjgsMC43LTIuMiwxLTQsMUgxMjYuMXogTTI1NC42LDk1LjFjLTUuMiwwLTEwLjQtMC42LTE1LjQtMS44DQoJCWMtNS0xLjItOC45LTIuNS0xMS41LTRjLTEuNi0wLjktMi43LTEuOS0zLjEtMi44Yy0wLjQtMC45LTAuNi0xLjktMC42LTIuOHYtNS4xYzAtMi4xLDAuOC0zLjEsMi4zLTMuMWMwLjYsMCwxLjIsMC4xLDEuOCwwLjMNCgkJYzAuNiwwLjIsMS41LDAuNiwyLjUsMWMzLjQsMS41LDcuMSwyLjcsMTEsMy41YzQsMC44LDcuOSwxLjIsMTEuOSwxLjJjNi4zLDAsMTEuMi0xLjEsMTQuNi0zLjNjMy40LTIuMiw1LjItNS40LDUuMi05LjUNCgkJYzAtMi44LTAuOS01LjEtMi43LTdjLTEuOC0xLjktNS4yLTMuNi0xMC4xLTUuMkwyNDYsNTJjLTcuMy0yLjMtMTIuNy01LjctMTYtMTAuMmMtMy4zLTQuNC01LTkuMy01LTE0LjVjMC00LjIsMC45LTcuOSwyLjctMTEuMQ0KCQljMS44LTMuMiw0LjItNiw3LjItOC4yYzMtMi4zLDYuNC00LDEwLjQtNS4yYzQtMS4yLDguMi0xLjcsMTIuNi0xLjdjMi4yLDAsNC41LDAuMSw2LjcsMC40YzIuMywwLjMsNC40LDAuNyw2LjUsMS4xDQoJCWMyLDAuNSwzLjksMSw1LjcsMS42YzEuOCwwLjYsMy4yLDEuMiw0LjIsMS44YzEuNCwwLjgsMi40LDEuNiwzLDIuNWMwLjYsMC44LDAuOSwxLjksMC45LDMuM3Y0LjdjMCwyLjEtMC44LDMuMi0yLjMsMy4yDQoJCWMtMC44LDAtMi4xLTAuNC0zLjgtMS4yYy01LjctMi42LTEyLjEtMy45LTE5LjItMy45Yy01LjcsMC0xMC4yLDAuOS0xMy4zLDIuOGMtMy4xLDEuOS00LjcsNC44LTQuNyw4LjljMCwyLjgsMSw1LjIsMyw3LjENCgkJYzIsMS45LDUuNywzLjgsMTEsNS41bDE0LjIsNC41YzcuMiwyLjMsMTIuNCw1LjUsMTUuNSw5LjZjMy4xLDQuMSw0LjYsOC44LDQuNiwxNGMwLDQuMy0wLjksOC4yLTIuNiwxMS42DQoJCWMtMS44LDMuNC00LjIsNi40LTcuMyw4LjhjLTMuMSwyLjUtNi44LDQuMy0xMS4xLDUuNkMyNjQuNCw5NC40LDI1OS43LDk1LjEsMjU0LjYsOTUuMXoiLz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTI3My41LDE0My43Yy0zMi45LDI0LjMtODAuNywzNy4yLTEyMS44LDM3LjJjLTU3LjYsMC0xMDkuNS0yMS4zLTE0OC43LTU2LjdjLTMuMS0yLjgtMC4zLTYuNiwzLjQtNC40DQoJCQljNDIuNCwyNC42LDk0LjcsMzkuNSwxNDguOCwzOS41YzM2LjUsMCw3Ni42LTcuNiwxMTMuNS0yMy4yQzI3NC4yLDEzMy42LDI3OC45LDEzOS43LDI3My41LDE0My43eiIvPg0KCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjg3LjIsMTI4LjFjLTQuMi01LjQtMjcuOC0yLjYtMzguNS0xLjNjLTMuMiwwLjQtMy43LTIuNC0wLjgtNC41YzE4LjgtMTMuMiw0OS43LTkuNCw1My4zLTUNCgkJCWMzLjYsNC41LTEsMzUuNC0xOC42LDUwLjJjLTIuNywyLjMtNS4zLDEuMS00LjEtMS45QzI4Mi41LDE1NS43LDI5MS40LDEzMy40LDI4Ny4yLDEyOC4xeiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K);--elastic-logo:url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDYuNjQgMzAwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6I2ZlYzUxNDt9LmNscy0ze2ZpbGw6IzAwYmZiMzt9LmNscy00e2ZpbGw6I2YwNGU5ODt9LmNscy01e2ZpbGw6IzFiYTlmNTt9LmNscy02e2ZpbGw6IzkzYzkwZTt9LmNscy03e2ZpbGw6IzA3Yzt9LmNscy04e2ZpbGw6IzFjMWUyMzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmxvZ28tZWxhc3RpYy1ob3Jpem9udGFsLWNvbG9yXzE8L3RpdGxlPjxnIGlkPSJsb2dvLWVsYXN0aWMtdmVydGljYWwtY29sb3IiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIzMSwxMTIuMzZhNDIuMzgsNDIuMzgsMCwwLDAtMjgtNDAsNjAsNjAsMCwwLDAsMS4xMi0xMS41N0E2MC44MSw2MC44MSwwLDAsMCw5NCwyNS4yMywzMi4zLDMyLjMsMCwwLDAsNDMuOTEsNjJhNDIuOTIsNDIuOTIsMCwwLDAtMjguMjUsNDAuMTEsNDIuNDEsNDIuNDEsMCwwLDAsMjguMTYsNDAuMDgsNjEuNTgsNjEuNTgsMCwwLDAtMS4xMSwxMS41Nyw2MC42NCw2MC42NCwwLDAsMCwxMTAsMzUuMzUsMzIuMjQsMzIuMjQsMCwwLDAsNTAuMDYtMzYuNjVBNDIuOTMsNDIuOTMsMCwwLDAsMjMxLDExMi4zNiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwMC4zMSw5Mi4zN2w0Ny4xMSwyMS40N0wxOTUsNzIuMmE1Mi41Myw1Mi41MywwLDAsMCwxLTEwLjQ1LDUzLjEzLDUzLjEzLDAsMCwwLTk3LTMwbC03LjksNDFaIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNNTEuNTUsMTQyLjI2YTUzLjksNTMuOSwwLDAsMC0xLDEwLjYsNTMuMjUsNTMuMjUsMCwwLDAsOTcuMzEsMjkuOTVsNy44NS00MC44OC0xMC40Ny0yMEw5Ny45LDEwMC4zNloiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik01MS4yNSw2MC43M2wzMi4yOCw3LjYyLDcuMDgtMzYuNzFBMjUuNTIsMjUuNTIsMCwwLDAsNTEuMjUsNjAuNzMiLz48cGF0aCBjbGFzcz0iY2xzLTUiIGQ9Ik00OC40NSw2OC40MkEzNS42LDM1LjYsMCwwLDAsNDYuOSwxMzUuNUw5Mi4yLDk0LjU2LDgzLjg4LDc2Ljc5WiIvPjxwYXRoIGNsYXNzPSJjbHMtNiIgZD0iTTE1Ni4xMSwxODIuODFhMjUuMzYsMjUuMzYsMCwwLDAsNDAuODItMjAuMTgsMjUuNTgsMjUuNTgsMCwwLDAtMS41NC04Ljg1bC0zMi4yNi03LjU1WiIvPjxwYXRoIGNsYXNzPSJjbHMtNyIgZD0iTTE2Mi42NywxMzcuNzdsMzUuNTEsOC4zMWEzNS45MywzNS45MywwLDAsMCwyNC40Ni0zMy44MiwzNS41NSwzNS41NSwwLDAsMC0yMi45NS0zMy4yMWwtNDYuNDUsNDAuN1oiLz48cGF0aCBjbGFzcz0iY2xzLTgiIGQ9Ik0zNSwyOTIuOTRsMi44LS4yOS4xOSw1LjcxYTEzOC44NSwxMzguODUsMCwwLDEtMTguODUsMS41NHEtMTAuNDUsMC0xNC44LTZUMCwyNzUuMDVxMC0yNS40MiwyMC4yMS0yNS40Myw5Ljc2LDAsMTQuNiw1LjQ2dDQuODQsMTcuMTdsLS4zOSw1LjUxSDcuMzVxMCw4LDIuOSwxMS44OXQxMC4xMSwzLjg3UTI3LjU2LDI5My41MiwzNSwyOTIuOTRaTTMyLjQsMjcycTAtOC45LTIuODYtMTIuNTd0LTkuMjgtMy42OHEtNi40NCwwLTkuNjcsMy44N1Q3LjI1LDI3MloiLz48cGF0aCBjbGFzcz0iY2xzLTgiIGQ9Ik00OS43NiwyOTkuNTNWMjM1Ljg4SDU3djYzLjY1WiIvPjxwYXRoIGNsYXNzPSJjbHMtOCIgZD0iTTEwMi42OSwyNjUuMTl2MjQuMzljMCwyLjQxLDYsMi4zMiw2LDIuMzJsLS4zNyw2LjQxYy01LjEsMC05LjMxLjQyLTExLjg1LTJhNDIuMTQsNDIuMTQsMCwwLDEtMTcuNCwzLjYycS02LjY4LDAtMTAuMTUtMy43N1Q2NS40NiwyODUuM3EwLTcuMDUsMy41OC0xMC4zOXQxMS4yMS00LjExbDE1LjE4LTEuNDV2LTQuMTZxMC00Ljk0LTIuMTItNy4wNmE3Ljg1LDcuODUsMCwwLDAtNS44LTIuMTNsLTE5LjA2LDB2LTYuNEg4N3E4LjIyLDAsMTEuOTQsMy43N1QxMDIuNjksMjY1LjE5Wk03Mi45LDI4NC45MXEwLDguOTEsNy4zNSw4LjlhMzkuMTUsMzkuMTUsMCwwLDAsMTMtMi4yMmwyLjIyLS43OFYyNzQuODZsLTE0LjMxLDEuMzVxLTQuMzUuMzktNi4yOCwyLjUyQzczLjU1LDI4MC4xNCw3Mi45LDI4Mi4yMSw3Mi45LDI4NC45MVoiLz48cGF0aCBjbGFzcz0iY2xzLTgiIGQ9Ik0xMzEsMjU2LjFxLTEwLjUzLDAtMTAuNTQsNy4zNWE1LjA3LDUuMDcsMCwwLDAsMi40Miw0Ljc4cTIuNDEsMS40MSwxMSwyLjl0MTIuMTgsNC4yMXEzLjU3LDIuNzEsMy41OCwxMC4xNXQtNC43OSwxMC45M3EtNC43OCwzLjQ4LTE0LDMuNDhjLTQsMC0xNy4zNC0xLjQ4LTE3LjM0LTEuNDhsLjM5LTYuMjhjNy42Ni43NCwxMy4yMSwxLjI4LDE3LDEuMjhzNi41OS0uNTksOC41Ni0xLjc4LDIuOTUtMy4yLDIuOTUtNi0uODQtNC43MS0yLjUyLTUuNzEtNS4zNS0xLjk1LTExLTIuODUtOS43MS0yLjIyLTEyLjA5LTQtMy41OC01LTMuNTgtOS42NywxLjY2LTguMTksNS0xMC40NWEyMS42NiwyMS42NiwwLDAsMSwxMi40My0zLjM4YzMuOTMsMCwxNy41NywxLDE3LjU3LDF2Ni4zMkMxNDEsMjU2LjYxLDEzNS4xMiwyNTYuMSwxMzEsMjU2LjFaIi8+PHBhdGggY2xhc3M9ImNscy04IiBkPSJNMTg0LjY0LDI1Ni44N0gxNjkuMjZWMjgwcTAsOC4zMiwxLjIxLDEwLjkzYy44MSwxLjc0LDIuNzIsMi42MSw1Ljc1LDIuNjFsOC42MS0uNTguNDgsNmE2Ny4yMSw2Ny4yMSwwLDAsMS05Ljg2LDEuMDZxLTcuNTUsMC0xMC40NC0zLjY3dC0yLjktMTRWMjU2Ljg3aC02Ljg3di02LjI4aDYuODd2LTE0LjhoNy4xNXYxNC44aDE1LjM4WiIvPjxwYXRoIGNsYXNzPSJjbHMtOCIgZD0iTTE5NC43MiwyNDQuNDFWMjM2SDIwMnY4LjQxWm0wLDU1LjEyVjI1MC41OUgyMDJ2NDguOTRaIi8+PHBhdGggY2xhc3M9ImNscy04IiBkPSJNMjMzLjM5LDI0OS42MmE4NC4yNiw4NC4yNiwwLDAsMSwxMC44MywxLjE2bDIuMzIuMjktLjI5LDUuOWExMTMuNTIsMTEzLjUyLDAsMCwwLTExLjQxLS44N3EtOC4yMiwwLTExLjE3LDMuOTF0LTIuOTUsMTQuNTFxMCwxMC41OSwyLjc2LDE0Ljc1dDExLjQ1LDQuMTVsMTEuNDItLjg3LjI5LDZhOTkuOCw5OS44LDAsMCwxLTEzLjQ1LDEuMzVxLTExLjMxLDAtMTUuNjEtNS44dC00LjMxLTE5LjU4cTAtMTMuNzgsNC42NS0xOS4zNFQyMzMuMzksMjQ5LjYyWiIvPjwvZz48L3N2Zz4=);--audiobubble-logo:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjMuMjIyNDQiIGZpbGw9IiNGMjcyMEMiLz4NCjxjaXJjbGUgY3g9IjIyLjU1MjQiIGN5PSIyMy44OTc0IiByPSIxMC4wMTM2IiBmaWxsPSIjRkZGN0YyIi8+DQo8Y2lyY2xlIGN4PSI0NC4zNDU3IiBjeT0iMzIuNzMyOSIgcj0iNS44OTAzNSIgZmlsbD0iI0ZGRjdGMiIvPg0KPGNpcmNsZSBjeD0iMzEuOTc2MiIgY3k9IjQxLjU2ODIiIHI9IjIuOTQ1MTgiIGZpbGw9IiNGRkY3RjIiLz4NCjwvc3ZnPg0K);--subcommunity-aws-color:#3b4045;--subcommunity-elastic-color:#0064bd;--subcommunity-audiobubble-color:#29b5e8}</style>
+<link rel=alternate type=application/atom+xml title="Feed for question 'How do I close a tkinter window?'" href=https://stackoverflow.com/feeds/question/110923>
+<meta name=twitter:app:country content=US>
+<meta name=twitter:app:name:iphone content="Stack Exchange iOS">
+<meta name=twitter:app:id:iphone content=871299723>
+<meta name=twitter:app:url:iphone content=se-zaphod://stackoverflow.com/questions/110923/how-do-i-close-a-tkinter-window>
+<meta name=twitter:app:name:ipad content="Stack Exchange iOS">
+<meta name=twitter:app:id:ipad content=871299723>
+<meta name=twitter:app:url:ipad content=se-zaphod://stackoverflow.com/questions/110923/how-do-i-close-a-tkinter-window>
+<meta name=twitter:app:name:googleplay content="Stack Exchange Android">
+<meta name=twitter:app:url:googleplay content=https://stackoverflow.com/questions/110923/how-do-i-close-a-tkinter-window>
+<meta name=twitter:app:id:googleplay content=com.stackexchange.marvin>
+<noscript id=noscript-css><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+<style>.clc-dismiss svg{height:16px;width:16px;fill:#6A7177}div.clc-cp-multi .footer .arrow-ico{color:var(--black-200)}</style><meta http-equiv=origin-trial content=A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9><meta http-equiv=origin-trial content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="shortcut icon" href=data:image/x-icon;base64,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/wMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKI7g8kgPTvJID0/ySA89sggO8QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKA9TQkgPPII4DzLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////wAAD/8AAA//P//P/z//z/8wAM//MADP/z//z/8/4E//+AB///AAf//wBD//8OA///+AH//+AA//+AQH//gYA//8cAP//8CD//+BB///Ag///4wf//+cP///+D////B////4///////////////////////><style>.sf-hidden{display:none!important}</style></head>
+ <body class="question-page unified-theme">
+ <div id=notify-container style=display:none!important></div>
+ <div id=custom-header style=display:none!important></div>
+ 
+<header class="top-bar js-top-bar top-bar__network _fixed" style=display:none!important>
+ <div class="wmx12 mx-auto grid ai-center h100" role=menubar style=display:none!important>
+ 
+ 
+ 
+ <form id=search role=search action=/search class="grid--cell fl-grow1 searchbar px12 js-searchbar" autocomplete=off style=display:none!important>
+ <div class=ps-relative style=display:none!important>
+ 
+ <svg aria-hidden=true class="s-input-icon s-input-icon__search svg-icon iconSearch" width=18 height=18 viewBox="0 0 18 18"><path d="M18 16.5l-5.14-5.18h-.35a7 7 0 10-1.19 1.19v.35L16.5 18l1.5-1.5zM12 7A5 5 0 112 7a5 5 0 0110 0z"></path></svg>
+ 
+ </div>
+ </form>
+ 
+ 
+<ol class="overflow-x-auto ml-auto -secondary grid ai-center list-reset h100 user-logged-in" role=presentation style=display:none!important>
+ <li class="-item searchbar-trigger" style=display:none!important></li>
+ 
+ <li class="-item inbox-button-item" style=display:none!important>
+ <a href="https://stackexchange.com/users/20563425?tab=inbox" class="-link js-inbox-button" aria-label=Inbox title="Recent inbox messages" role=menuitem aria-haspopup=true aria-expanded=false data-unread-count=0 style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconInbox" width=20 height=18 viewBox="0 0 20 18"><path d="M4.63 1h10.56a2 2 0 011.94 1.35L20 10.79V15a2 2 0 01-2 2H2a2 2 0 01-2-2v-4.21l2.78-8.44c.25-.8 1-1.36 1.85-1.35zm8.28 12l2-2h2.95l-2.44-7.32a1 1 0 00-.95-.68H5.35a1 1 0 00-.95.68L1.96 11h2.95l2 2h6z"></path></svg>
+ 
+ </a>
+ </li>
+ <li class="-item achievements-button-item" style=display:none!important>
+ <a href="https://stackexchange.com/users/20563425?tab=reputation" class="-link js-achievements-button" data-unread-class=_highlighted-positive aria-label=Achievements title="Recent achievements: reputation, badges, and privileges earned" role=menuitem aria-haspopup=true aria-expanded=false data-unread-count=0 data-lit-up=false style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconAchievements" width=18 height=18 viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"></path></svg>
+ 
+ </a>
+ </li>
+ <li class="-item help-button-item" style=display:none!important>
+ <a href=# class="-link js-help-button" title="Help Center and other resources" role=menuitem aria-haspopup=true aria-controls=topbar-help-dialog data-ga='["top navigation","help menu click",null,null,null]' aria-expanded=false style=display:none!important><svg aria-hidden=true class="svg-icon iconHelp" width=18 height=18 viewBox="0 0 18 18"><path d="M9 1a8 8 0 100 16A8 8 0 009 1zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23zM11.77 8c-.3.34-.65.65-1.02.91l-.53.37c-.26.2-.42.43-.5.69a4 4 0 00-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.03-.66.12-1.21.4-1.66.4-.49.88-.9 1.43-1.22.16-.12.28-.25.38-.39a1.34 1.34 0 00.02-1.71c-.24-.31-.51-.46-1.03-.46-.51 0-.8.26-1.02.6-.21.33-.18.73-.18 1.1H5.75c0-1.38.35-2.25 1.1-2.76.52-.35 1.17-.5 1.93-.5 1 0 1.79.18 2.49.71.64.5.98 1.18.98 2.12 0 .57-.2 1.05-.48 1.44z"></path></svg></a>
+ </li>
+ 
+ <li class="-item site-switcher-item" style=display:none!important>
+ <a href=https://stackexchange.com/ class="-link js-site-switcher-button js-gps-track" data-gps-track=site_switcher.show aria-label="Site switcher" title="A list of all 176 Stack Exchange sites" role=menuitem aria-haspopup=true aria-expanded=false data-ga='["top navigation","stack exchange click",null,null,null]' style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconStackExchange" width=18 height=18 viewBox="0 0 18 18"><path d="M15 1H3a2 2 0 00-2 2v2h16V3a2 2 0 00-2-2zM1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 002-2v-2H1v2zm16-7H1v4h16V6z"></path></svg>
+ </a>
+ </li>
+ 
+</ol>
+ </div>
+</header>
+ 
+ 
+ 
+ <div class=container>
+ 
+<div id=left-sidebar data-is-here-when="md lg" class="left-sidebar js-pinned-left-sidebar ps-relative" style=display:none!important>
+ <div class="left-sidebar--sticky-container js-sticky-leftnav" style=display:none!important>
+ <nav role=navigation style=display:none!important>
+ <ol class=nav-links style=display:none!important>
+ 
+ <li style=display:none!important>
+ <ol class=nav-links style=display:none!important>
+ 
+ 
+ <li class=youarehere style=display:none!important>
+ <a id=nav-questions href=https://stackoverflow.com/questions class="pl8 js-gps-track nav-links--link -link__with-icon" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})" aria-controls data-controller data-s-popover-placement=right style=display:none!important>
+<svg aria-hidden=true class="svg-icon iconGlobe" width=18 height=18 viewBox="0 0 18 18"><path d="M9 1a8 8 0 100 16A8 8 0 009 1zM8 15.32a6.4 6.4 0 01-5.23-7.75L7 11.68v.8c0 .88.12 1.32 1 1.32v1.52zm5.72-2c-.2-.66-1-1.32-1.72-1.32h-1v-2c0-.44-.56-1-1-1H6V7h1c.44 0 1-.56 1-1V5h2c.88 0 1.4-.72 1.4-1.6v-.33a6.4 6.4 0 012.32 10.24v.01z"></path></svg> 
+ </a>
+ </li>
+ 
+ 
+ 
+ 
+ 
+ 
+ </ol>
+ </li>
+ <li style=display:none!important>
+ <ol class=nav-links style=display:none!important>
+ 
+ <li class=ps-relative style=display:none!important>
+ <a href=https://stackoverflow.com/teams class="pl8 js-gps-track nav-links--link" title="Stack Overflow for Teams is a private, secure spot for your organization's questions and answers." data-gps-track="teams.create.left-sidenav.click({ Action: TeamsClick })" data-ga='["teams left navigation","left nav team click","stackoverflow.com/teams",null,null]' style=display:none!important>
+ <div class="grid ai-center" style=display:none!important>
+ <div class="grid--cell s-avatar va-middle bg-orange-400" style=display:none!important>
+ <div class="s-avatar--letter mtn1" style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconBriefcaseSm" width=14 height=14 viewBox="0 0 14 14"><path d="M4 3a1 1 0 011-1h4a1 1 0 011 1v1h.5c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5h-7A1.5 1.5 0 012 10.5v-5C2 4.67 2.67 4 3.5 4H4V3zm5 1V3H5v1h4z"></path></svg>
+ </div>
+ <svg aria-hidden=true class="native s-avatar--badge svg-icon iconShieldXSm" width=9 height=10 viewBox="0 0 9 10"><path d="M0 1.84L4.5 0 9 1.84v3.17C9 7.53 6.3 10 4.5 10 2.7 10 0 7.53 0 5.01V1.84z" fill=var(--white)></path><path d="M1 2.5L4.5 1 8 2.5v2.51C8 7.34 5.34 9 4.5 9 3.65 9 1 7.34 1 5.01V2.5zm2.98 3.02L3.2 7h2.6l-.78-1.48a.4.4 0 01.15-.38c.34-.24.73-.7.73-1.14 0-.71-.5-1.23-1.41-1.23-.92 0-1.39.52-1.39 1.23 0 .44.4.9.73 1.14.12.08.18.23.15.38z" fill=var(--black-500)></path></svg>
+ </div>
+ 
+ </div>
+ </a>
+ </li>
+ </ol>
+ </li>
+ </ol>
+ </nav>
+ </div>
+ <div class="s-popover w-auto p16" id=popover-teams-create-cta role=menu aria-hidden=true style=display:none!important>
+ 
+ 
+ 
+ </div>
+</div>
+ <div id=content class=snippet-hidden>
+ 
+<div itemprop=mainEntity itemscope itemtype=https://schema.org/Question>
+ <link itemprop=image href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a" class=sf-hidden>
+ <div class="inner-content clearfix">
+ 
+ <div id=question-header class="grid sm:fd-column" style=display:none!important>
+ 
+ 
+ </div>
+ <div class="grid fw-wrap pb8 mb16 bb bc-black-075" style=display:none!important>
+ 
+ 
+ 
+ </div>
+ <div id=mainbar role=main aria-label="question and answers">
+ 
+<div class=question data-questionid=110923 id=question style=display:none!important>
+ 
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=110923 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-gh0g68cj style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-uo12uu2d style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ <button class="js-bookmark-btn s-btn s-btn__unset c-pointer py4 js-gps-track" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Bookmark (23)" data-selected-classes=fc-yellow-600 data-gps-track="post.click({ item: 1, priv: -1, post_type: 1 })" aria-describedby=--stacks-s-tooltip-nj2qgfms style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconBookmark" width=18 height=18 viewBox="0 0 18 18"><path d="M6 1a2 2 0 00-2 2v14l5-4 5 4V3a2 2 0 00-2-2H6zm3.9 3.83h2.9l-2.35 1.7.9 2.77L9 7.59l-2.35 1.7.9-2.76-2.35-1.7h2.9L9 2.06l.9 2.77z"></path></svg>
+ 
+ </button>
+ 
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/110923/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-3lkccitn style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+<div class="postcell post-layout--right" style=display:none!important>
+ 
+ 
+ 
+ <div class=mb0 style=display:none!important>
+ <div class="mt16 grid gs8 gsy fw-wrap jc-end ai-start pt4 mb16" style=display:none!important>
+ <div class="grid--cell mr16 fl1 w96" style=display:none!important>
+ 
+<div class="js-post-menu pt2" data-post-id=110923 style=display:none!important>
+ <div class="grid d-flex gs8 s-anchors s-anchors__muted fw-wrap" style=display:none!important>
+ 
+ 
+ 
+ <div class="s-popover ws2 js-question-follow-feature-popover is-visible" id=divQuestionFollowFeaturePopover style="position:absolute;inset:0px auto auto 0px;margin:0px;transform:translate(227.2px,465.6px);display:none!important" data-popper-placement=bottom data-popper-reference-hidden>
+ 
+ <button type=button class="s-popover--close s-btn s-btn__muted js-dismiss" aria-label=Dismiss style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconClearSm" width=14 height=14 viewBox="0 0 14 14"><path d="M12 3.41L10.59 2 7 5.59 3.41 2 2 3.41 5.59 7 2 10.59 3.41 12 7 8.41 10.59 12 12 10.59 8.41 7 12 3.41z"></path></svg>
+ </button>
+ <div class="grid ai-center" style=display:none!important>
+ <div class="grid--cell mr12" style=display:none!important>
+ <svg aria-hidden=true class="fc-orange-400 svg-spot spotBell" width=48 height=48 viewBox="0 0 48 48"><path d="M11.81.8a1.37 1.37 0 10-2.5 1.16l1.91 4.09a1.38 1.38 0 002.5-1.16l-1.9-4.1zm-8.7 3.98a1.38 1.38 0 011.94-.18l3.97 3.28A1.38 1.38 0 017.26 10L3.3 6.72a1.37 1.37 0 01-.19-1.94zm34.91 23.57a21.3 21.3 0 00-.23-12.08 19.77 19.77 0 00-3-5.95 3.49 3.49 0 00-1.9-4.19 3.49 3.49 0 00-4.43 1.25c-2.2.13-4.4.71-6.44 1.58a21.65 21.65 0 00-9.3 7.6c-.82 1.18-1.6 2.39-2.4 3.6l-.38.6c-2.34 3.6-3.55 5.07-4.87 5.64-1.08.47-2.3 1.1-2.82 2.22A3 3 0 003.7 32.6l27.82 12.98c1.96.91 4.33-.6 4.27-2.8a8.47 8.47 0 00-.39-2.24c-.41-1.36-.07-3.24 1.2-7.35.49-1.6 1-3.21 1.42-4.84zM.27 14.11c.02-.76.66-1.35 1.42-1.33l4.75.16a1.38 1.38 0 01-.1 2.75l-4.74-.16a1.38 1.38 0 01-1.33-1.42zm45.99 15.63a1.37 1.37 0 00.73-2.65l-4.96-1.37a1.37 1.37 0 00-.74 2.65l4.97 1.37zm-2.74 6.53c-.5.57-1.37.64-1.94.14l-3.42-2.96a1.38 1.38 0 011.8-2.08l3.42 2.96c.57.5.64 1.36.14 1.94zm3.22-15.37a1.38 1.38 0 00-1.05-2.54l-4.4 1.8a1.38 1.38 0 001.05 2.55l4.4-1.8z" opacity=.2></path><path d="M13.73 22.3a1 1 0 11-1.78-.92c3.61-7.07 8.02-10.8 13.34-11.26a1 1 0 01.17 2c-4.53.39-8.4 3.66-11.73 10.17zm22.33 3.55c1.13-4.3.95-8.36-.23-12.08a19.78 19.78 0 00-3.01-5.95 3.49 3.49 0 00-1.9-4.18 3.49 3.49 0 00-4.42 1.24c-2.21.13-4.4.71-6.44 1.58a21.65 21.65 0 00-9.3 7.6c-.83 1.18-1.61 2.39-2.4 3.6l-.38.6c-2.34 3.6-3.55 5.07-4.87 5.64a9.4 9.4 0 00-1.9 1.08 3 3 0 00.52 5.12l27.83 12.98a3 3 0 004.26-2.8 8.47 8.47 0 00-.38-2.24c-.41-1.36-.07-3.24 1.19-7.34l.21-.7c.43-1.38.85-2.75 1.22-4.15zm-4.23 14.48a1 1 0 01-1.43.94L2.58 28.29a1 1 0 01-.18-1.7c.43-.32.93-.6 1.5-.86 1.84-.8 3.17-2.4 5.76-6.39l.39-.6c.77-1.19 1.53-2.38 2.35-3.53a19.65 19.65 0 018.44-6.91 15.72 15.72 0 016.23-1.44 1 1 0 00.92-.57c.42-.9 1.3-1.21 2.09-.84.8.37 1.11 1.24.7 2.13a1 1 0 00.15 1.09 15.96 15.96 0 013 5.7 19.36 19.36 0 01.2 10.97c-.37 1.36-.78 2.71-1.2 4.06l-.21.7c-1.4 4.55-1.77 6.61-1.2 8.52.2.61.3 1.18.3 1.71zm-14.78-.72a1 1 0 111.78.9 2.44 2.44 0 104.44 2.03 1 1 0 011.85.77 4.44 4.44 0 11-8.07-3.7z"></path></svg>
+ </div>
+ 
+ </div>
+ </div>
+ </div>
+ 
+</div>
+ </div>
+ 
+ 
+ </div>
+ </div>
+ 
+</div>
+ 
+ 
+ </div>
+</div>
+<div class="js-zone-container zone-container-responsive" style=display:none!important>
+ 
+ 
+</div>
+ <div id=answers>
+ <a name=tab-top style=display:none!important></a>
+ <div id=answers-header style=display:none!important>
+ 
+ 
+<div class="js-mfnes-container s-notice s-notice__info" style=display:none!important>
+ <div class="grid jc-space-between ai-center" style=display:none!important>
+ 
+ <div class=grid--cell style=display:none!important>
+ <button class="js-mfnes-dismiss s-btn p0" type=button aria-label=Dismiss style=display:none!important><svg aria-hidden=true class="svg-icon iconClearSm" width=14 height=14 viewBox="0 0 14 14"><path d="M12 3.41L10.59 2 7 5.59 3.41 2 2 3.41 5.59 7 2 10.59 3.41 12 7 8.41 10.59 12 12 10.59 8.41 7 12 3.41z"></path></svg></button>
+ </div>
+ </div>
+</div>
+ </div>
+ 
+<a name=15577605 style=display:none!important></a>
+<div id=answer-15577605 class="answer accepted-answer" data-answerid=15577605 itemprop=acceptedAnswer itemscope itemtype=https://schema.org/Answer>
+ <div class=post-layout>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=15577605 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-8dalg01t style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-o57qj5jh style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ <div class=ta-center style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconCheckmarkLg" width=36 height=36 viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"></path></svg>
+ </div>
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/15577605/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-ltc2zwhf style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+<div class="answercell post-layout--right">
+ 
+ <div class="s-prose js-post-body" itemprop=text>
+<p><strong>You should use <code>destroy()</code> to close a tkinter window.</strong></p>
+<pre class="lang-py s-code-block hljs python"><code><span class=hljs-keyword>from</span> Tkinter <span class=hljs-keyword>import</span> *
+
+root = Tk()
+Button(root, text=<span class=hljs-string>"Quit"</span>, command=root.destroy).pack()
+root.mainloop()
+</code></pre>
+<hr>
+<p><strong>Explanation:</strong></p>
+<pre class="lang-py s-code-block hljs python"><code>root.quit()
+</code></pre>
+<p>The above line just <strong>Bypasses</strong> the <code>root.mainloop()</code> i.e <code>root.mainloop()</code> will still be running in background if <code>quit()</code> command is executed.</p>
+<pre class="lang-py s-code-block hljs python"><code>root.destroy()
+</code></pre>
+<p>While <code>destroy()</code> command vanish out <code>root.mainloop()</code> i.e <code>root.mainloop()</code> stops.</p>
+<p>So as you just want to quit the program so you should use <code>root.destroy()</code> as it will it stop the <code>mainloop()</code>.</p>
+<p>But if you want to run some infinite loop and you don't want to destroy your Tk window and want to execute some code after <code>root.mainloop()</code> line then you should use <code>root.quit()</code>. Ex:</p>
+<pre class="lang-py s-code-block hljs python"><code><span class=hljs-keyword>from</span> Tkinter <span class=hljs-keyword>import</span> *
+<span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>quit</span>():</span>
+    <span class=hljs-keyword>global</span> root
+    root.quit()
+
+root = Tk()
+<span class=hljs-keyword>while</span> <span class=hljs-literal>True</span>:
+    Button(root, text=<span class=hljs-string>"Quit"</span>, command=quit).pack()
+    root.mainloop()
+    <span class=hljs-comment>#do something</span>
+</code></pre>
+ </div>
+ 
+ 
+</div>
+ 
+ <div class="post-layout--right js-post-comments-component" style=display:none!important>
+ <div id=comments-15577605 class="comments js-comments-container bt bc-black-075 mt12" data-post-id=15577605 data-min-length=15 style=display:none!important>
+ <ul class="comments-list js-comments-list" data-remaining-comments-count=0 data-canpost=false data-cansee=true data-comments-unavailable=false data-addlink-disabled=true style=display:none!important>
+ 
+ 
+ 
+ <li id=comment-106626683 class="comment js-comment" data-comment-id=106626683 style=display:none!important>
+ 
+ <div class="comment-text js-comment-text-and-form" style=display:none!important>
+ <div class="comment-body js-comment-edit-hide" style=display:none!important>
+ 
+ 
+ 
+–&nbsp;
+ 
+ <span title="this comment was edited 1 time" style=display:none!important>
+ <svg aria-hidden=true class="va-text-bottom o50 svg-icon iconPencilSm" width=14 height=14 viewBox="0 0 14 14"><path d="M11.1 1.71l1.13 1.12c.2.2.2.51 0 .71L11.1 4.7 9.21 2.86l1.17-1.15c.2-.2.51-.2.71 0zM2 10.12l6.37-6.43 1.88 1.88L3.88 12H2v-1.88z"></path></svg>
+ </span>
+ </div>
+ </div>
+ </li>
+ </ul>
+ </div>
+ 
+ </div>
+ </div>
+</div>
+ 
+<div id=answer-110929 class=answer data-answerid=110929 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=110929 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-7lmyy31z style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-1fyc3tyw style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/110929/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-5el7bqvn style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ <div class="post-layout--right js-post-comments-component" style=display:none!important>
+ <div id=comments-110929 class="comments js-comments-container bt bc-black-075 mt12" data-post-id=110929 data-min-length=15 style=display:none!important>
+ <ul class="comments-list js-comments-list" data-remaining-comments-count=0 data-canpost=false data-cansee=true data-comments-unavailable=false data-addlink-disabled=true style=display:none!important>
+ 
+ <li id=comment-6816150 class="comment js-comment" data-comment-id=6816150 style=display:none!important>
+ 
+ <div class="comment-text js-comment-text-and-form" style=display:none!important>
+ <div class="comment-body js-comment-edit-hide" style=display:none!important>
+ 
+ 
+ 
+–&nbsp;
+ 
+ <span title="this comment was edited 2 times" style=display:none!important>
+ <svg aria-hidden=true class="va-text-bottom o50 svg-icon iconPencilSm" width=14 height=14 viewBox="0 0 14 14"><path d="M11.1 1.71l1.13 1.12c.2.2.2.51 0 .71L11.1 4.7 9.21 2.86l1.17-1.15c.2-.2.51-.2.71 0zM2 10.12l6.37-6.43 1.88 1.88L3.88 12H2v-1.88z"></path></svg>
+ </span>
+ </div>
+ </div>
+ </li>
+ </ul>
+ </div>
+ 
+ </div>
+ </div>
+</div>
+ 
+<div id=answer-294199 class=answer data-answerid=294199 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=294199 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-qo86x772 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-9fomgq67 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/294199/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-v20p26pa style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-18852907 class=answer data-answerid=18852907 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=18852907 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-oihil2se style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-krnp1it4 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/18852907/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-4f89d8oh style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-111011 class=answer data-answerid=111011 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=111011 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-wx1ct0gd style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-69qd6bai style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/111011/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-8vk1jjlx style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-39174800 class=answer data-answerid=39174800 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=39174800 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-jg892vzt style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-5zpyu8e9 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/39174800/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-syiv6w9y style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-55536097 class=answer data-answerid=55536097 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=55536097 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-vkzxyv4x style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-yuvmuqyv style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/55536097/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-61rdc78s style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-53041670 class=answer data-answerid=53041670 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=53041670 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-poj9qrsn style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-ngdgk8j2 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/53041670/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-4aq3z2rf style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-46625980 class=answer data-answerid=46625980 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=46625980 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-qmi0wshl style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-8fmo7nfk style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/46625980/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-q2iw4gvy style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-51495698 class=answer data-answerid=51495698 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=51495698 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-jlr0eyfr style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-dvfc1q89 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/51495698/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-ufel7puo style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-44122214 class=answer data-answerid=44122214 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=44122214 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-9ui8fjlq style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-hstahh6p style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/44122214/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-07rrdrt7 style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-57989602 class=answer data-answerid=57989602 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=57989602 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-nc19gr8b style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-ekp76qmr style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/57989602/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-thkzdizp style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-49659459 class=answer data-answerid=49659459 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=49659459 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-hycskz31 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-lfijaccn style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/49659459/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-zjlzw8jp style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-61335741 class=answer data-answerid=61335741 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=61335741 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-yb9wkvnx style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-ytqsvimj style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/61335741/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-8evmali7 style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-58797078 class=answer data-answerid=58797078 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=58797078 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-cmske12z style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-hgrzfhw1 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/58797078/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-1lrg2g86 style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-48300957 class=answer data-answerid=48300957 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=48300957 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-0ea5zwu6 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-tky5a5es style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/48300957/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-gfhc8lu6 style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-53755060 class=answer data-answerid=53755060 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=53755060 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-rl9yudym style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-1cjvkmfe style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/53755060/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-hjphzi4e style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-55957531 class=answer data-answerid=55957531 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=55957531 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-zfl460p8 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-vdrbdkfg style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/55957531/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-urr2l4wm style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-65463440 class=answer data-answerid=65463440 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=65463440 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-xxxncq1h style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-jmjq4i7y style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/65463440/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-i5yue8e2 style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-60100538 class=answer data-answerid=60100538 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=60100538 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-uj2ca4wy style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-gcw157y7 style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/60100538/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-u3dij0vq style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-39336070 class=answer data-answerid=39336070 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=39336070 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-vnaudb8i style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-5xndq2nd style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/39336070/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-dwd5z9yo style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+<div id=answer-30480553 class="answer downvoted-answer" data-answerid=30480553 itemprop=suggestedAnswer itemscope itemtype=https://schema.org/Answer style=display:none!important>
+ <div class=post-layout style=display:none!important>
+ <div class="votecell post-layout--left" style=display:none!important>
+ <div class="js-voting-container grid jc-center fd-column ai-stretch gs4 fc-black-200" data-post-id=30480553 data-suppress-vote-requests=false style=display:none!important>
+ <button class="js-vote-up-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Up vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-v7sst0zn style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowUpLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></button>
+ 
+ <button class="js-vote-down-btn grid--cell s-btn s-btn__unset c-pointer" data-controller=s-tooltip data-s-tooltip-placement=right aria-pressed=false aria-label="Down vote" data-selected-classes=fc-theme-primary aria-describedby=--stacks-s-tooltip-27iv3uji style=display:none!important><svg aria-hidden=true class="m0 svg-icon iconArrowDownLg" width=36 height=36 viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></button>
+ 
+ <div class="js-accepted-answer-indicator grid--cell fc-green-500 py6 mtn8 d-none" data-s-tooltip-placement=right title="Loading when this answer was accepted…" tabindex=0 role=note aria-label=Accepted style=display:none!important>
+ 
+ </div>
+ 
+ <a class="js-post-issue grid--cell s-btn s-btn__unset c-pointer py6 mx-auto" href=https://stackoverflow.com/posts/30480553/timeline data-shortcut=T data-controller=s-tooltip data-s-tooltip-placement=right aria-label=Timeline aria-describedby=--stacks-s-tooltip-q9wfjo25 style=display:none!important><svg aria-hidden=true class="mln2 mr0 svg-icon iconHistory" width=19 height=18 viewBox="0 0 19 18"><path d="M3 9a8 8 0 113.73 6.77L8.2 14.3A6 6 0 105 9l3.01-.01-4 4-4-4h3L3 9zm7-4h1.01L11 9.36l3.22 2.1-.6.93L10 10V5z"></path></svg></a>
+</div>
+ </div>
+ 
+ 
+ 
+ </div>
+</div>
+ 
+ <form id=post-form action=/questions/110923/answer/submit method=post class="js-add-answer-component post-form" style=display:none!important>
+ 
+ 
+ 
+ 
+ 
+ 
+<div id=post-editor class="post-editor js-post-editor" style=display:none!important>
+ 
+ <aside class="grid ai-start jc-space-between js-answer-help s-notice s-notice__warning pb0 pr4 pt4 mb8 d-none" role=status aria-hidden=true style=display:none!important>
+ 
+ 
+</aside>
+ <aside class="grid ai-start jc-space-between js-answer-ban s-notice s-notice__danger pb0 pr4 pt4 mb8 d-none" role=status aria-hidden=true style=display:none!important>
+ 
+ 
+</aside>
+ 
+ 
+ 
+ 
+</div>
+ 
+ 
+ 
+ </form>
+ 
+ </div>
+ </div>
+ <div id=sidebar class=show-votes role=complementary aria-label=sidebar style=display:none!important>
+ 
+ 
+ 
+ 
+<div class="s-sidebarwidget s-sidebarwidget__yellow s-anchors s-anchors__grayscale mb16" data-tracker="cb=1" style=display:none!important>
+ <ul class="d-block p0 m0" style=display:none!important>
+ 
+ <li class="s-sidebarwidget--item grid px16" style=display:none!important>
+ <div class="grid--cell1 fl-shrink0" style=display:none!important>
+<svg aria-hidden=true class="va-text-top svg-icon iconPencilSm" width=14 height=14 viewBox="0 0 14 14"><path d="M11.1 1.71l1.13 1.12c.2.2.2.51 0 .71L11.1 4.7 9.21 2.86l1.17-1.15c.2-.2.51-.2.71 0zM2 10.12l6.37-6.43 1.88 1.88L3.88 12H2v-1.88z"></path></svg> </div>
+ 
+ </li>
+ <li class="s-sidebarwidget--item grid px16" style=display:none!important>
+ <div class="grid--cell1 fl-shrink0" style=display:none!important>
+<svg aria-hidden=true class="va-text-top svg-icon iconPencilSm" width=14 height=14 viewBox="0 0 14 14"><path d="M11.1 1.71l1.13 1.12c.2.2.2.51 0 .71L11.1 4.7 9.21 2.86l1.17-1.15c.2-.2.51-.2.71 0zM2 10.12l6.37-6.43 1.88 1.88L3.88 12H2v-1.88z"></path></svg> </div>
+ 
+ </li>
+ 
+ 
+ 
+ 
+ 
+ 
+ </ul>
+</div>
+<div id=hireme class="check-out-purple tex2jax_ignore clc-cp-multi" style=display:none!important><div class=middle style=display:none!important><ul class="companies pt6" style=display:none!important><li class=clc-dismissable style=display:none!important><a class="clc-dismiss grid--cell" data-clc-click="https://clc.stackoverflow.com/click?an=49qv3Rjfcu6GB69CX5ATExPL6UdsD7ufc2azbF0n_neq_O02DQYjhp4NDAwN9oyMDCzcrAvviz-7LX_qDEKcm7X3gfjtduVXP7SRxI5-Fl__TX7mc2R1v_9Kfb2j3HdOBy7G0Ohdsu3mk9hZ0_cAAA&amp;cr=665162&amp;ct=-3&amp;sig=ZOge7cz1EQ0KWA" data-clc-meta-target=-3 style=display:none!important><svg viewBox="0 0 13.6 13.6"><path d="M11.4 2.3C8.9-.2 4.8-.2 2.3 2.3s-2.5 6.6 0 9.1 6.6 2.5 9.1 0 2.5-6.6 0-9.1zM8.6 9.5L6.8 7.7 5 9.5l-.9-.9 1.8-1.8L4.1 5l.9-.9 1.8 1.8 1.8-1.8.9.9-1.8 1.8 1.8 1.8-.9.9z"></path></svg></a><li class=clc-dismissable style=display:none!important><a class="clc-dismiss grid--cell" data-clc-click="https://clc.stackoverflow.com/click?an=49qv3Rjfcu6GB69CX5ATExPL6UdsD7ufc2azbF0n_neq_O02DQYjhp4NDAwN9oyMDCzcrAvviz-7LX_qDEKcm7X3gfjtduVXP7SRxI5-Fl__TX7mc2R1v_9Kfb2j3HdOBy7G0Ohdsu3mk9hZ0_cAAA&amp;cr=719978&amp;ct=-3&amp;sig=jFZpsN35_qO9jA" data-clc-meta-target=-3 style=display:none!important><svg viewBox="0 0 13.6 13.6"><path d="M11.4 2.3C8.9-.2 4.8-.2 2.3 2.3s-2.5 6.6 0 9.1 6.6 2.5 9.1 0 2.5-6.6 0-9.1zM8.6 9.5L6.8 7.7 5 9.5l-.9-.9 1.8-1.8L4.1 5l.9-.9 1.8 1.8 1.8-1.8.9.9-1.8 1.8 1.8 1.8-.9.9z"></path></svg></a><li class=clc-dismissable style=display:none!important><a class="clc-dismiss grid--cell" data-clc-click="https://clc.stackoverflow.com/click?an=49qv3Rjfcu6GB69CX5ATExPL6UdsD7ufc2azbF0n_neq_O02DQYjhp4NDAwN9oyMDCzcrAvviz-7LX_qDEKcm7X3gfjtduVXP7SRxI5-Fl__TX7mc2R1v_9Kfb2j3HdOBy7G0Ohdsu3mk9hZ0_cAAA&amp;cr=668569&amp;ct=-3&amp;sig=A64tKnPLL9NGww" data-clc-meta-target=-3 style=display:none!important><svg viewBox="0 0 13.6 13.6"><path d="M11.4 2.3C8.9-.2 4.8-.2 2.3 2.3s-2.5 6.6 0 9.1 6.6 2.5 9.1 0 2.5-6.6 0-9.1zM8.6 9.5L6.8 7.7 5 9.5l-.9-.9 1.8-1.8L4.1 5l.9-.9 1.8 1.8 1.8-1.8.9.9-1.8 1.8 1.8 1.8-.9.9z"></path></svg></a><li class=clc-dismissable style=display:none!important><a class="clc-dismiss grid--cell" data-clc-click="https://clc.stackoverflow.com/click?an=49qv3Rjfcu6GB69CX5ATExPL6UdsD7ufc2azbF0n_neq_O02DQYjhp4NDAwN9oyMDCzcrAvviz-7LX_qDEKcm7X3gfjtduVXP7SRxI5-Fl__TX7mc2R1v_9Kfb2j3HdOBy7G0Ohdsu3mk9hZ0_cAAA&amp;cr=730894&amp;ct=-3&amp;sig=WfyPj4A2b5D1uA" data-clc-meta-target=-3 style=display:none!important><svg viewBox="0 0 13.6 13.6"><path d="M11.4 2.3C8.9-.2 4.8-.2 2.3 2.3s-2.5 6.6 0 9.1 6.6 2.5 9.1 0 2.5-6.6 0-9.1zM8.6 9.5L6.8 7.7 5 9.5l-.9-.9 1.8-1.8L4.1 5l.9-.9 1.8 1.8 1.8-1.8.9.9-1.8 1.8 1.8 1.8-.9.9z"></path></svg></a></ul><a class=footer href="https://stackoverflow.com/jobs/companies?so_medium=Ad&amp;so_source=SharedCompanyAd&amp;so_campaign=GenericPurple" target=_blank data-clc-click="https://clc.stackoverflow.com/click?an=49qv3Rjfcu6GB69CX5ATExPL6UdsD7ufc2azbF0n_neq_O02DQYjhp4NDAwN9oyMDCzcrAvviz-7LX_qDEKcm7X3gfjtduVXP7SRxI5-Fl__TX7mc2R1v_9Kfb2j3HdOBy7G0Ohdsu3mk9hZ0_cAAA&amp;cr=656219&amp;ct=2&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2Fcompanies%3Fso_medium%3DAd%26so_source%3DSharedCompanyAd%26so_campaign%3DGenericPurple%26med%3Dclc%26clc-var%3D50&amp;sig=QW96v_RebHwrsg" style=display:none!important><div class="grid ai-baseline pl12 pb12 pr12 pt6" style=display:none!important><div class=grid--cell style=display:none!important><svg aria-hidden=true class="svg-icon iconLogoGlyphSm" width=19 height=22 viewBox="0 0 19 22"><g><path fill=#C1BEBC d="M16 20v-6h2v8H0v-8h2v6z"></path><path d="M4 18h10v-2H4v2zm8.72-18l-1.57 1.17L17 9.05l1.57-1.18L12.72 0zM7.86 4.64l7.54 6.28 1.25-1.5-7.54-6.29-1.25 1.51zM5.39 9.01l8.9 4.14.83-1.78-8.9-4.14L5.4 9zm-1.27 4.6l9.91 1.67.13-1.67-9.63-1.92-.4 1.92z" fill=#F48024></path></g></svg></div><div class=grid--cell style=display:none!important><svg aria-hidden=true class="arrow-ico svg-icon iconArrowRightAlt" width=18 height=18 viewBox="0 0 18 18"><path d="M6.41 2L5 3.41 10.59 9 5 14.59 6.41 16l7-7z"></path></svg></div></div></a></div></div> 
+ 
+ 
+ 
+ 
+ <div id=feed-link class=js-feed-link style=display:none!important>
+ <a href=https://stackoverflow.com/feeds/question/110923 title="Feed of this question and its answers" style=display:none!important>
+ <svg aria-hidden=true class="fc-orange-400 svg-icon iconRss" width=18 height=18 viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 012 2v12a2 2 0 01-2 2H3a2 2 0 01-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0110 10h2.5zm-5 0A7.5 7.5 0 003 7.5V10a5 5 0 015 5h2.5zm-5 0A2.5 2.5 0 003 12.5V15h2.5z"></path></svg>
+ Question feed
+ </a>
+ </div>
+ <aside class="s-modal js-feed-link-modal" tabindex=-1 role=dialog aria-labelledby=feed-modal-title aria-describedby=feed-modal-description aria-hidden=true style=display:none!important>
+ <div class="s-modal--dialog js-modal-dialog wmx4" role=document data-controller=se-draggable style=display:none!important>
+ 
+ <div class="grid gs4 gsy fd-column" style=display:none!important>
+ 
+ <div class="grid ps-relative" style=display:none!important>
+ 
+ <svg aria-hidden=true class="s-input-icon fc-orange-400 svg-icon iconRss" width=18 height=18 viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 012 2v12a2 2 0 01-2 2H3a2 2 0 01-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0110 10h2.5zm-5 0A7.5 7.5 0 003 7.5V10a5 5 0 015 5h2.5zm-5 0A2.5 2.5 0 003 12.5V15h2.5z"></path></svg>
+ </div>
+ </div>
+ <a class="s-modal--close s-btn s-btn__muted js-modal-close js-last-tabbable" href=# aria-label=Close style=display:none!important>
+ <svg aria-hidden=true class="svg-icon iconClearSm" width=14 height=14 viewBox="0 0 14 14"><path d="M12 3.41L10.59 2 7 5.59 3.41 2 2 3.41 5.59 7 2 10.59 3.41 12 7 8.41 10.59 12 12 10.59 8.41 7 12 3.41z"></path></svg>
+ </a>
+ </div>
+ </aside>
+ </div>
+ </div>
+</div>
+ 
+ </div>
+ </div>
+ 
+ <footer id=footer class="site-footer js-footer" role=contentinfo style=display:none!important>
+ <div class=site-footer--container style=display:none!important>
+ <div class=site-footer--logo style=display:none!important>
+ 
+ <a href=https://stackoverflow.com/ style=display:none!important><svg aria-hidden=true class="native svg-icon iconLogoGlyphMd" width=32 height=37 viewBox="0 0 32 37"><path d="M26 33v-9h4v13H0V24h4v9h22z" fill=#BCBBBB></path><path d="M21.5 0l-2.7 2 9.9 13.3 2.7-2L21.5 0zM26 18.4L13.3 7.8l2.1-2.5 12.7 10.6-2.1 2.5zM9.1 15.2l15 7 1.4-3-15-7-1.4 3zm14 10.79l.68-2.95-16.1-3.35L7 23l16.1 2.99zM23 30H7v-3h16v3z" fill=#F48024></path></svg></a>
+ </div>
+ <nav class=site-footer--nav style=display:none!important>
+ 
+ 
+ 
+ <div class="site-footer--col site-footer--categories-nav site-footer--col__visible" style=display:none!important>
+ <a href=# class="site-footer--back js-footer-back" style=display:none!important><svg aria-hidden=true class="svg-icon iconArrowLeftAlt" width=18 height=18 viewBox="0 0 18 18"><path d="M10.58 16L12 14.59 6.4 9 12 3.41 10.57 2l-7 7 7 7z"></path></svg></a>
+ 
+ </div>
+ 
+ </nav>
+ 
+ </div>
+ </footer>
+ 
+ 
+ 
+ 
+ 
+ 
