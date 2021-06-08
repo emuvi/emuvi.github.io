@@ -313,7 +313,7 @@ body {
 .yui-gc .yui-u,
 .yui-gc .yui-g,
 .yui-gd .yui-u {
-  width: 32%;
+  width: 29%;
   margin-left: 1.99%;
 }
 .yui-gb .yui-u {
@@ -322,10 +322,10 @@ body {
 }
 .yui-gc div.first,
 .yui-gd .yui-u {
-  width: 66%;
+  width: 69%;
 }
 .yui-gd div.first {
-  width: 32%;
+  width: 29%;
 }
 .yui-ge div.first,
 .yui-gf .yui-u {
@@ -357,12 +357,12 @@ body {
 .yui-g .yui-gb div.first,
 .yui-gb .yui-gb div.first {
   *margin-right: 0;
-  *width: 32%;
+  *width: 29%;
   _width: 31.7%;
 }
 .yui-g .yui-gc div.first,
 .yui-gd .yui-g {
-  width: 66%;
+  width: 69%;
 }
 .yui-gb .yui-g div.first {
   *margin-right: 4%;
@@ -381,7 +381,7 @@ body {
   _margin-left: 1%;
 }
 .yui-gb .yui-gd .yui-u {
-  *width: 66%;
+  *width: 69%;
   _width: 61.2%;
 }
 .yui-gb .yui-gd div.first {
@@ -390,13 +390,13 @@ body {
 }
 .yui-g .yui-gc .yui-u,
 .yui-gb .yui-gc .yui-u {
-  width: 32%;
+  width: 29%;
   _float: right;
   margin-right: 0;
   _margin-left: 0;
 }
 .yui-gb .yui-gc div.first {
-  width: 66%;
+  width: 69%;
   *float: left;
   *margin-left: 0;
 }
@@ -417,7 +417,7 @@ body {
   *margin-left: 0;
 }
 .yui-gb .yui-gd div.first {
-  width: 32%;
+  width: 29%;
 }
 .yui-g .yui-gd div.first {
   _width: 29.9%;
@@ -450,7 +450,7 @@ body {
   width: 65%;
 }
 .yui-ge div.first .yui-gd div.first {
-  width: 32%;
+  width: 29%;
 }
 #hd:after,
 #bd:after,
