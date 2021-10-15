@@ -1,0 +1,162 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body {
+    background-image: url("./back.png");
+    font-family: Georgia;
+    font-size: 14px;
+    color: #180027;
+    padding: 30px;
+}
+
+a {
+    color: #990003;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+#divBody {
+    margin: auto;
+    max-width: 940px;
+    width: 90%;
+    border: 1px solid #180027;
+    background-color: #FFFEFA;
+}
+
+#divLittleTopBar {
+    height: 9px;
+    background-color: #5e5e5e;
+}
+
+#divContent {
+    padding: 18px 45px 45px 45px;
+}
+
+.divRowContent { 
+    padding: 27px 0px 18px 0px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.divColFirst {
+    width: 120px;
+}
+
+.divRowFirstTitle {
+    font-style: italic;
+    font-size: 16px;
+    padding-bottom: 18px;
+}
+
+.divRowPicture {
+    text-align: right;
+    padding: 12px 12px 0px 0px;
+}
+
+.divColTitle {
+    text-align: center;
+    min-width: 400px;
+    padding-top: 27px;
+}
+
+.divRowName {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.divRowClass {
+    text-transform: uppercase;
+    font-size: 21px;
+    margin-top: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 680px) {
+    .divRowName {
+        font-size: 27px;
+    }
+    
+    .divRowClass {
+        font-size: 16px;
+    }
+
+    .divColTitle {
+        min-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .divRowName {
+        font-size: 21px;
+    }
+    
+    .divRowClass {
+        font-size: 14px;
+    }
+
+    .divColTitle {
+        min-width: 270px;
+    }
+}
+
+.divRowClass span {
+    border-top: 1px solid black;
+}
+
+.divColContact {
+    width: 210px;
+    padding-top: 27px;
+    text-align: right;
+}
+
+.divColOthers {
+    flex: 1;
+}
+
+.divColFluid {
+    padding-right: 36px;
+    min-width: 270px;
+}
+
+@media only screen and (max-width: 510px) {
+
+    .divColFluid {
+        min-width: 180px;
+    }
+
+}
+
+.divColStone {
+    min-width: 130px;
+}
+
+.divColStoneLined {
+    min-width: 230px;
+}
+
+.divColText {
+    padding-right: 36px;
+    padding-bottom: 18px;
+}
+
+.divItemTitle {
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.divRowLined {
+    border-bottom: 1px solid #dadada;
+    padding: 5px 0px;
+}
+
+.divRowLinedLast {
+    padding: 5px 0px 18px 0px;
+}

@@ -23,6 +23,7 @@ body {
   font-family: Georgia;
   color: #444;
 }
+
 #inner {
   padding: 10px 80px;
   margin: 80px auto;
@@ -30,6 +31,7 @@ body {
   border: solid #666;
   border-width: 8px 0 2px 0;
 }
+
 .yui-gf {
   margin-bottom: 2em;
   padding-bottom: 2em;
