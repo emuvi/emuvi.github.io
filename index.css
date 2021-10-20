@@ -13,11 +13,12 @@ body {
 }
 
 a {
-    color: #990003;
+    color: #AE0009;
+    text-decoration: none;
 }
 
 a:hover {
-    font-style: italic;
+    text-decoration: underline;
 }
 
 #divBody {
@@ -49,7 +50,7 @@ a:hover {
 }
 
 .divRowFirstTitle {
-    font-style: italic;
+    font-weight: bold;
     font-size: 16px;
     padding-bottom: 18px;
 }
@@ -70,6 +71,7 @@ a:hover {
     font-size: 36px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.09em;
 }
 
 .divRowClass {
@@ -77,9 +79,11 @@ a:hover {
     font-size: 21px;
     margin-top: 7px;
     font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    letter-spacing: 0.03em;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 650px) {
     .divRowName {
         font-size: 27px;
     }
@@ -93,7 +97,7 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 480px) {
     .divRowName {
         font-size: 21px;
     }
@@ -107,14 +111,20 @@ a:hover {
     }
 }
 
-.divRowClass span {
-    border-top: 1px solid black;
+.divRowName div {
+    display: inline-block;
+    padding: 3px 9px;
+    border-bottom: 1px solid black;
 }
 
 .divColContact {
     width: 210px;
     padding-top: 27px;
     text-align: right;
+}
+
+.divColContact div {
+    margin: 7px 0px;
 }
 
 .divColOthers {
@@ -149,7 +159,24 @@ a:hover {
 
 .divItemTitle {
     font-size: 16px;
+    padding-bottom: 9px;
     margin-bottom: 9px;
+    border-bottom: 1px solid #dadada;
+    font-style: italic;
+}
+
+.divItemTitleFirst {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.divItemTitleSecond {
+    display: inline-block;
+    font-size: small;
+}
+
+.divItemContent {
+    margin-bottom: 36px;
 }
 
 .divRowLined {
