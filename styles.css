@@ -35,7 +35,19 @@ a:hover {
 }
 
 #divContent {
-    padding: 18px 45px 45px 45px;
+    padding: 36px;
+}
+
+@media only screen and (max-width: 650px) {
+    #divContent {
+        padding: 27px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #divContent {
+        padding: 18px;
+    }
 }
 
 .divRowContent { 
@@ -46,7 +58,7 @@ a:hover {
 }
 
 .divColFirst {
-    width: 120px;
+    width: 110px;
 }
 
 .divRowFirstTitle {
@@ -137,11 +149,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 510px) {
-
     .divColFluid {
         min-width: 180px;
     }
-
 }
 
 .divColStone {
