@@ -73,9 +73,13 @@ a:hover {
 }
 
 .divColTitle {
+    margin-top: 12px;
     text-align: center;
-    min-width: 400px;
-    padding-top: 27px;
+    min-width: 440px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .divRowName {
@@ -83,16 +87,15 @@ a:hover {
     font-size: 36px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.07em;
 }
 
 .divRowClass {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 7px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    letter-spacing: 0.03em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.07em;
 }
 
 @media only screen and (max-width: 650px) {
@@ -105,7 +108,7 @@ a:hover {
     }
 
     .divColTitle {
-        min-width: 300px;
+        min-width: 330px;
     }
 }
 
@@ -130,16 +133,19 @@ a:hover {
 }
 
 .divColContact {
+    margin-top: 12px;
     width: 210px;
-    padding-top: 27px;
-    text-align: right;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .divColContact div {
-    margin: 7px 0px;
+    margin: 3px 0px;
 }
 
-.divColOthers {
+.divColExpand {
     flex: 1;
 }
 
@@ -159,7 +165,7 @@ a:hover {
 }
 
 .divColStoneLined {
-    min-width: 230px;
+    min-width: 240px;
 }
 
 .divColText {
