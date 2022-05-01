@@ -11,8 +11,11 @@ while(<SRC>){
     if($inside){
         if(/<a href="(.*?)">(.*?)<\/a>/){
           my $link = $1;
-          my $title = $2;
-          my $treat = qq{<!DOCTYPE html>
+          if (-e $link){
+            print "File $link already exists.\n";
+          } else {
+            my $title = $2;
+            my $treat = qq{<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -41,9 +44,11 @@ while(<SRC>){
     </div>
   </body>
 </html>};
-          open(DES, '>', $link) or die $!;
-          print DES $treat;
-          close(DES);
+            open(DES, '>', $link) or die $!;
+            print DES $treat;
+            close(DES);
+            print "Generated $link.\n";
+          }
         }
     }
     if(/<!-- END TREATING SECTION -->/){

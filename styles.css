@@ -175,7 +175,7 @@ a.top-link:hover {
 }
 
 .divColStoneLined {
-  min-width: 250px;
+  min-width: fit-content;
 }
 
 .divColText {
