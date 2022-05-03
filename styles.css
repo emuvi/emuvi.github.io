@@ -32,6 +32,13 @@ a.top-link:hover {
   text-decoration: underline;
 }
 
+button {
+  padding: 2px;
+  color: #180027;
+  border: 1px solid #180027;
+  background-color: transparent;
+}
+
 #divBody {
   margin: auto;
   max-width: 1000px;
