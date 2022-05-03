@@ -34,6 +34,7 @@ a.top-link:hover {
 
 button {
   padding: 2px;
+  margin: 2px;
   color: #180027;
   border: 1px solid #180027;
   background-color: transparent;
