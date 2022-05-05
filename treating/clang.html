@@ -1,24 +1,6 @@
-#!/usr/bin/perl
-use warnings;
-use strict;
-
-my $starting = "./treating/";
-open(SRC, '<', 'index.html') or die $!;
-while(<SRC>) {
-  if(/<a href="(.*?)">(.*?)<\/a>/) {
-    my $link = $1;
-    print "Found link: $link\n";
-    if (rindex $link, $starting, 0 eq -1) {
-      print "The link does not starts with: $starting\n";
-      next;
-    }
-    if (-e $link){
-      print "File $link already exists.\n";
-      next;
-    }
-    my $title = $2;
-    my $treat = qq{<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,21 +20,15 @@ while(<SRC>) {
             <a class="top-link" href="http://emuvi.blog.br"
               target="_blank">emuvi.blog.br</a> |
             <a class="top-link"
-              href="mailto:everton.muvi\@gmail.com">everton.muvi\@gmail.com</a> |
+              href="mailto:everton.muvi@gmail.com">everton.muvi@gmail.com</a> |
             <button onclick="history.back()">return</button>
           </div>
-          <h1>$title</h1>
+          <h1>C Language</h1>
           <p>Processing a small essay about it...</p>
         </div>
       </div>
     </div>
   </div>
 </body>
-</html>};
-    open(DES, '>', $link) or die $!;
-    print DES $treat;
-    close(DES);
-    print "Generated $link.\n";
-  }
-}
-close(SRC);
+
+</html>
