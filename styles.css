@@ -263,3 +263,12 @@ p {
   margin: 14px;
   border: solid 1px rgb(54, 54, 54);
 }
+
+.readLink {
+  cursor: pointer;
+  margin-left: 9px;
+}
+
+.readMore {
+  display: none;
+}
