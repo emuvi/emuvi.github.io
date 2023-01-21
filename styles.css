@@ -5,11 +5,10 @@
 }
 
 body {
-  background-image: url("./back.png");
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 14px;
   color: #180027;
-  padding: 30px 10px;
+  padding: 0px;
 }
 
 a {
@@ -42,10 +41,8 @@ button {
 
 #divBody {
   margin: auto;
-  max-width: 1000px;
-  width: 90%;
-  border: 1px solid #180027;
-  background-color: #fffefa;
+  width: 100%;
+  background-color: white;
 }
 
 #divLittleTopBar {
@@ -54,24 +51,12 @@ button {
 }
 
 #divContent {
-  padding: 36px;
+  padding: 36px 36px 18px 36px;
   flex: 1;
 }
 
-@media only screen and (max-width: 650px) {
-  #divContent {
-    padding: 27px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  #divContent {
-    padding: 18px;
-  }
-}
-
 .divRowContent {
-  padding: 27px 0px 18px 0px;
+  padding: 27px 0px 9px 0px;
   border-bottom: 1px solid #dadada;
   display: flex;
   flex-flow: row wrap;
@@ -89,13 +74,12 @@ button {
 
 .divRowPicture {
   text-align: right;
-  padding: 12px 12px 0px 0px;
+  padding: 0px 12px 0px 0px;
 }
 
 .divColTitle {
-  margin-top: 12px;
+  margin-top: 0px;
   text-align: center;
-  min-width: 440px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -271,4 +255,17 @@ p {
 
 .readMore {
   display: none;
+}
+
+@media print {
+  .printBreak {
+    break-inside: avoid;
+    padding-top: 45px;
+  }
+}
+
+@media print {
+  .printHide {
+    display: none;
+  }
 }
