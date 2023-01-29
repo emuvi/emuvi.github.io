@@ -52,6 +52,8 @@ button {
 
 #divContent {
   padding: 36px 36px 18px 36px;
+  max-width: 999px;
+  margin: auto;
   flex: 1;
 }
 
@@ -215,6 +217,7 @@ h1 {
   font-size: 33px;
   font-weight: bold;
   margin-bottom: 18px;
+  clear: both;
 }
 
 h2 {
@@ -222,12 +225,14 @@ h2 {
   font-weight: bold;
   font-style: italic;
   margin-bottom: 14px;
+  clear: both;
 }
 
 h3 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 9px;
+  clear: both;
 }
 
 h4,
@@ -268,4 +273,10 @@ p {
   .printHide {
     display: none;
   }
+}
+
+.divCopyright {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
 }
