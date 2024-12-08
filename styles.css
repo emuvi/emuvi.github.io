@@ -1,281 +1,301 @@
 * {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 body {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 14px;
-  color: #180027;
-  padding: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 14px;
+    color: #180027;
+    padding: 0px;
 }
 
 a {
-  color: #540045;
-  text-decoration: underline;
+    color: #540045;
+    text-decoration: underline;
 }
 
 a:hover {
-  color: #810072;
-  text-decoration: underline;
+    color: #810072;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #540045;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #540045;
+    text-decoration: underline;
 }
 
 a.top-link {
-  color: #7c0006;
-  text-decoration: underline;
+    color: #7c0006;
+    text-decoration: underline;
 }
 
 a.top-link:hover {
-  color: #a70008;
-  text-decoration: underline;
+    color: #a70008;
+    text-decoration: underline;
+}
+
+a.top-link:visited {
+    color: #7c0006;
+    text-decoration: underline;
+}
+
+a.top-link:active {
+    color: #7c0006;
+    text-decoration: underline;
 }
 
 button {
-  padding: 2px;
-  margin: 2px;
-  color: #180027;
-  border: 1px solid #180027;
-  background-color: transparent;
+    padding: 2px;
+    margin: 2px;
+    color: #180027;
+    border: 1px solid #180027;
+    background-color: transparent;
 }
 
 #divBody {
-  margin: auto;
-  width: 100%;
-  background-color: white;
+    margin: auto;
+    width: 100%;
+    background-color: white;
 }
 
 #divLittleTopBar {
-  height: 9px;
-  background-color: #5e5e5e;
+    height: 9px;
+    background-color: #5e5e5e;
 }
 
 #divContent {
-  padding: 36px 36px 18px 36px;
-  max-width: 999px;
-  margin: auto;
-  flex: 1;
+    padding: 36px 36px 18px 36px;
+    max-width: 999px;
+    margin: auto;
+    flex: 1;
 }
 
 .divRowContent {
-  padding: 27px 0px 9px 0px;
-  border-bottom: 1px solid #dadada;
-  display: flex;
-  flex-flow: row wrap;
+    padding: 27px 0px 9px 0px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .divColFirst {
-  width: 110px;
+    width: 110px;
 }
 
 .divRowFirstTitle {
-  font-weight: bold;
-  font-size: 16px;
-  padding-bottom: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 18px;
 }
 
 .divRowPicture {
-  text-align: right;
-  padding: 0px 12px 0px 0px;
+    text-align: right;
+    padding: 0px 12px 0px 0px;
 }
 
 .divColTitle {
-  margin-top: 0px;
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
-  align-items: center;
+    margin-top: 0px;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .divRowName {
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
 }
 
 .divRowClass {
-  font-size: 18px;
-  margin-top: 7px;
-  letter-spacing: 0.07em;
+    font-size: 18px;
+    margin-top: 7px;
+    letter-spacing: 0.07em;
 }
 
 @media only screen and (max-width: 650px) {
-  .divRowName {
-    font-size: 27px;
-  }
+    .divRowName {
+        font-size: 27px;
+    }
 
-  .divRowClass {
-    font-size: 16px;
-  }
+    .divRowClass {
+        font-size: 16px;
+    }
 
-  .divColTitle {
-    min-width: 330px;
-  }
+    .divColTitle {
+        min-width: 330px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
-  .divRowName {
-    font-size: 21px;
-  }
+    .divRowName {
+        font-size: 21px;
+    }
 
-  .divRowClass {
-    font-size: 14px;
-  }
+    .divRowClass {
+        font-size: 14px;
+    }
 
-  .divColTitle {
-    min-width: 270px;
-  }
+    .divColTitle {
+        min-width: 270px;
+    }
 }
 
 .divRowName div {
-  display: inline-block;
-  padding: 3px 9px;
-  border-bottom: 1px solid black;
+    display: inline-block;
+    padding: 3px 9px;
+    border-bottom: 1px solid black;
 }
 
 .divColContact {
-  margin-top: 12px;
-  width: 210px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-end;
-  justify-content: flex-end;
+    margin-top: 12px;
+    width: 210px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .divColContact div {
-  margin: 3px 0px;
+    margin: 3px 0px;
 }
 
 .divColExpand {
-  flex: 1;
+    flex: 1;
 }
 
 .divColFluid {
-  padding-right: 36px;
-  min-width: 270px;
+    padding-right: 36px;
+    min-width: 270px;
 }
 
 @media only screen and (max-width: 510px) {
-  .divColFluid {
-    min-width: 180px;
-  }
+    .divColFluid {
+        min-width: 180px;
+    }
 }
 
 .divColStone {
-  min-width: 130px;
+    min-width: 130px;
 }
 
 .divColStoneLined {
-  min-width: fit-content;
+    min-width: fit-content;
 }
 
 .divColText {
-  padding-right: 36px;
-  padding-bottom: 18px;
+    padding-right: 36px;
+    padding-bottom: 18px;
 }
 
 .divItemTitle {
-  font-size: 16px;
-  padding-bottom: 9px;
-  margin-bottom: 9px;
-  border-bottom: 1px solid #dadada;
-  font-style: italic;
+    font-size: 16px;
+    padding-bottom: 9px;
+    margin-bottom: 9px;
+    border-bottom: 1px solid #dadada;
+    font-style: italic;
 }
 
 .divItemTitleFirst {
-  display: inline-block;
-  font-weight: bold;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .divItemTitleSecond {
-  display: inline-block;
-  font-size: small;
+    display: inline-block;
+    font-size: small;
 }
 
 .divItemContent {
-  margin-bottom: 36px;
+    margin-bottom: 36px;
 }
 
 .divRowLined {
-  border-bottom: 1px solid #dadada;
-  padding: 5px 0px;
+    border-bottom: 1px solid #dadada;
+    padding: 5px 0px;
 }
 
 .divRowLinedLast {
-  padding: 5px 0px 18px 0px;
+    padding: 5px 0px 18px 0px;
 }
 
 #divNavBar {
-  text-align: right;
-  margin-bottom: 9px;
+    text-align: right;
+    margin-bottom: 9px;
 }
 
 h1 {
-  font-size: 33px;
-  font-weight: bold;
-  margin-bottom: 18px;
-  clear: both;
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    clear: both;
 }
 
 h2 {
-  font-size: 27px;
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 14px;
-  clear: both;
+    font-size: 27px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 14px;
+    clear: both;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 9px;
-  clear: both;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 9px;
+    clear: both;
 }
 
 h4,
 h5,
 h6 {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 p {
-  font-size: 17px;
-  margin-bottom: 21px;
+    font-size: 17px;
+    margin-bottom: 21px;
 }
 
 .imgFloatRight {
-  float: right;
-  margin: 14px;
-  border: solid 1px rgb(54, 54, 54);
+    float: right;
+    margin: 14px;
+    border: solid 1px rgb(54, 54, 54);
 }
 
 .readLink {
-  cursor: pointer;
-  margin-left: 9px;
+    cursor: pointer;
+    margin-left: 9px;
 }
 
 .readMore {
-  display: none;
-}
-
-@media print {
-  .printBreak {
-    break-inside: avoid;
-    padding-top: 45px;
-  }
-}
-
-@media print {
-  .printHide {
     display: none;
-  }
+}
+
+@media print {
+    .printBreak {
+        break-inside: avoid;
+        padding-top: 45px;
+    }
+}
+
+@media print {
+    .printHide {
+        display: none;
+    }
 }
 
 .divCopyright {
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
 }
