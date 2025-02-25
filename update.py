@@ -3,13 +3,13 @@ import urllib.parse
 
 end_tag = "<!--end-->"
 
-source = ""
-with open('index.html', mode="r", encoding="utf-8") as index:
-    source = index.read()
+def make(file_name):
+    global end_tag
+    source = ""
 
+    with open(file_name, mode="r", encoding="utf-8") as index:
+        source = index.read()
 
-def make_degrees():
-    global source  
     for category in os.listdir("degrees"):
         begin_tag = f"<!--begin degrees/{category}-->"
         try:
@@ -30,13 +30,12 @@ def make_degrees():
         made += "\n              "
         source = source[:start + len(begin_tag)] + made + source[end:]
 
-
-def save():
-    with open('index_new.html', mode="w", encoding="utf-8") as index_new:
+    with open(file_name, mode="w", encoding="utf-8") as index_new:
         index_new.write(source)
+
+    print("Done " + file_name)
 
 
 if __name__ == '__main__':
-    make_degrees()
-    save()
-    print("Done!")
+    make("index.html")
+    make("index-prof.html")
