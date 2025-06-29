@@ -6,9 +6,43 @@
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #180027;
     padding: 0px;
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    clear: both;
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 14px;
+    clear: both;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 9px;
+    clear: both;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 21px;
 }
 
 a {
@@ -85,12 +119,12 @@ button {
 }
 
 .divColFirst {
-    width: 110px;
+    width: 120px;
 }
 
 .divRowFirstTitle {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     padding-bottom: 18px;
 }
 
@@ -116,7 +150,7 @@ button {
 }
 
 .divRowClass {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 7px;
     letter-spacing: 0.07em;
 }
@@ -127,11 +161,16 @@ button {
     }
 
     .divRowClass {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .divColTitle {
         min-width: 330px;
+    }
+
+    .divRowContent {
+        padding: 18px 0px 6px 0px;
+        flex-flow: column wrap;
     }
 }
 
@@ -141,11 +180,16 @@ button {
     }
 
     .divRowClass {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .divColTitle {
         min-width: 270px;
+    }
+
+    .divRowContent {
+        padding: 14px 0px 3px 0px;
+        flex-flow: column wrap;
     }
 }
 
@@ -232,40 +276,6 @@ button {
     margin-bottom: 9px;
 }
 
-h1 {
-    font-size: 33px;
-    font-weight: bold;
-    margin-bottom: 18px;
-    clear: both;
-}
-
-h2 {
-    font-size: 27px;
-    font-weight: bold;
-    font-style: italic;
-    margin-bottom: 14px;
-    clear: both;
-}
-
-h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 9px;
-    clear: both;
-}
-
-h4,
-h5,
-h6 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-p {
-    font-size: 17px;
-    margin-bottom: 21px;
-}
-
 .imgFloatRight {
     float: right;
     margin: 14px;
@@ -297,5 +307,5 @@ p {
 .divCopyright {
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 10px;
 }
