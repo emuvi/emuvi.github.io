@@ -26,7 +26,7 @@ def make(file_name):
         for degree in sorted(os.listdir(f"degrees/{category}"), reverse=True):
             encoded_name = urllib.parse.quote(degree)  # Codifica o nome do arquivo
             link_path = f"degrees/{category}/{encoded_name}"  # Constrói o caminho do link
-            made += f"\n              <div><a href='{link_path}'>{degree}</a></div>"
+            made += f"\n                            <div><a href='{link_path}'>{degree}</a></div>"
         made += "\n              "
         source = source[:start + len(begin_tag)] + made + source[end:]
 
@@ -38,4 +38,3 @@ def make(file_name):
 
 if __name__ == '__main__':
     make("index.html")
-    make("index-prof.html")
