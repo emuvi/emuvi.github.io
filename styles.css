@@ -221,12 +221,6 @@ button {
     min-width: 270px;
 }
 
-@media only screen and (max-width: 510px) {
-    .divColFluid {
-        min-width: 180px;
-    }
-}
-
 .divColStone {
     min-width: 130px;
 }
@@ -302,10 +296,4 @@ button {
     .printHide {
         display: none;
     }
-}
-
-.divCopyright {
-    text-align: center;
-    font-weight: bold;
-    font-size: 10px;
 }
