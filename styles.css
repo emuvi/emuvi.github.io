@@ -155,6 +155,25 @@ button {
     letter-spacing: 0.07em;
 }
 
+.divRowName div {
+    display: inline-block;
+    padding: 3px 9px;
+    border-bottom: 1px solid black;
+}
+
+.divColContact {
+    margin-top: 12px;
+    margin-left: 80px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.divColContact div {
+    margin: 3px 0px;
+}
+
 @media only screen and (max-width: 650px) {
     .divRowName {
         font-size: 27px;
@@ -164,13 +183,14 @@ button {
         font-size: 14px;
     }
 
-    .divColTitle {
-        min-width: 330px;
-    }
-
     .divRowContent {
         padding: 18px 0px 6px 0px;
         flex-flow: column wrap;
+    }
+
+    .divColContact {
+        margin-top: 12px;
+        margin-left: 60px;
     }
 }
 
@@ -183,33 +203,15 @@ button {
         font-size: 12px;
     }
 
-    .divColTitle {
-        min-width: 270px;
-    }
-
     .divRowContent {
         padding: 14px 0px 3px 0px;
         flex-flow: column wrap;
     }
-}
 
-.divRowName div {
-    display: inline-block;
-    padding: 3px 9px;
-    border-bottom: 1px solid black;
-}
-
-.divColContact {
-    margin-top: 12px;
-    width: 210px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.divColContact div {
-    margin: 3px 0px;
+    .divColContact {
+        margin-top: 12px;
+        margin-left: 40px;
+    }
 }
 
 .divColExpand {
@@ -286,13 +288,16 @@ button {
 }
 
 @media print {
+    .divColContact {
+        margin-top: 12px;
+        margin-left: 40px;
+    }
+
     .printBreak {
         break-inside: avoid;
         padding-top: 45px;
     }
-}
 
-@media print {
     .printHide {
         display: none;
     }
