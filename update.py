@@ -27,7 +27,7 @@ def make(file_name):
             encoded_name = urllib.parse.quote(degree)  # Codifica o nome do arquivo
             link_path = f"degrees/{category}/{encoded_name}"  # Constrói o caminho do link
             made += f"\n                            <div><a href='{link_path}'>{degree}</a></div>"
-        made += "\n              "
+        made += "\n                            "
         source = source[:start + len(begin_tag)] + made + source[end:]
 
     with open(file_name, mode="w", encoding="utf-8") as index_new:
