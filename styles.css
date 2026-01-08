@@ -96,7 +96,7 @@ button {
 #divBody {
     margin: auto;
     width: 100%;
-    background-color: white;
+    background-image: url("back.png");
 }
 
 #divLittleTopBar {
@@ -109,6 +109,7 @@ button {
     max-width: 999px;
     margin: auto;
     flex: 1;
+    background-color: white;
 }
 
 .divRowContent {
